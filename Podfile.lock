@@ -1,0 +1,210 @@
+PODS:
+  - Alamofire (5.4.1)
+  - AutoInch (2.1.0)
+  - DefaultsKit (0.2.0)
+  - Differentiator (4.0.1)
+  - FBRetainCycleDetector (0.1.4)
+  - FLAnimatedImage (1.0.12)
+  - FLEX (4.2.2)
+  - GDPerformanceView-Swift (2.1.1)
+  - GKPageScrollViewSwift (1.4.2)
+  - HandyJSON (5.0.2)
+  - HBDNavigationBar (1.7.7)
+  - JXPagingView/Paging (2.0.13)
+  - JXSegmentedView (1.2.7)
+  - libwebp (1.1.0):
+    - libwebp/demux (= 1.1.0)
+    - libwebp/mux (= 1.1.0)
+    - libwebp/webp (= 1.1.0)
+  - libwebp/demux (1.1.0):
+    - libwebp/webp
+  - libwebp/mux (1.1.0):
+    - libwebp/demux
+  - libwebp/webp (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.4.3)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
+  - QuickLayout (3.0.0)
+  - R.swift (5.3.1):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - ReachabilitySwift (4.3.1)
+  - RxActivityIndicator (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxReachability (1.0.0):
+    - ReachabilitySwift (~> 4.3.1)
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SDWebImage/Core (5.10.2)
+  - SDWebImageFLPlugin (0.4.0):
+    - FLAnimatedImage (>= 1.0.11)
+    - SDWebImage/Core (~> 5.6)
+  - SDWebImageWebPCoder (0.6.1):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.7)
+  - SnapKit (5.0.1)
+  - SwiftEntryKit (1.2.7):
+    - QuickLayout (= 3.0.0)
+  - SwiftRichString (3.7.2)
+  - SwiftyBeaver (1.9.3)
+  - SwiftyJSON (5.0.0)
+  - Toaster (2.3.0)
+  - URLNavigator (2.3.0)
+  - XHLaunchAd (3.9.12):
+    - FLAnimatedImage (~> 1.0.12)
+  - ZFPlayer/AVPlayer (4.0.1):
+    - ZFPlayer/Core
+  - ZFPlayer/ControlView (4.0.1):
+    - ZFPlayer/Core
+  - ZFPlayer/Core (4.0.1)
+
+DEPENDENCIES:
+  - AutoInch (~> 2.1.0)
+  - DefaultsKit (~> 0.2.0)
+  - FLEX (~> 4.2.2)
+  - GDPerformanceView-Swift (~> 2.1.1)
+  - GKPageScrollViewSwift (~> 1.4.2)
+  - HandyJSON (~> 5.0.2)
+  - HBDNavigationBar (~> 1.7.7)
+  - JXPagingView/Paging (~> 2.0.13)
+  - JXSegmentedView (~> 1.2.7)
+  - MBProgressHUD (~> 1.2.0)
+  - MJRefresh (~> 3.4.3)
+  - MLeaksFinder
+  - Moya/RxSwift (~> 14.0.0)
+  - "NSObject+Rx (~> 5.1.0)"
+  - R.swift (~> 5.3.0)
+  - RxActivityIndicator (~> 1.0.0)
+  - RxDataSources (~> 4.0.1)
+  - RxReachability (~> 1.0.0)
+  - SDWebImageFLPlugin (~> 0.4.0)
+  - SDWebImageWebPCoder (~> 0.6.1)
+  - SnapKit (~> 5.0.1)
+  - SwiftEntryKit (~> 1.2.6)
+  - SwiftRichString (~> 3.7.2)
+  - SwiftyBeaver (~> 1.9.1)
+  - SwiftyJSON (~> 5.0.0)
+  - Toaster (from `https://github.com/devxoul/Toaster`, commit `aec54fc48d3d36279424103de0784c23862d19df`)
+  - URLNavigator (~> 2.3.0)
+  - XHLaunchAd (~> 3.9.12)
+  - ZFPlayer/AVPlayer (~> 4.0.1)
+  - ZFPlayer/ControlView
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AutoInch
+    - DefaultsKit
+    - Differentiator
+    - FBRetainCycleDetector
+    - FLAnimatedImage
+    - FLEX
+    - GDPerformanceView-Swift
+    - GKPageScrollViewSwift
+    - HandyJSON
+    - HBDNavigationBar
+    - JXPagingView
+    - JXSegmentedView
+    - libwebp
+    - MBProgressHUD
+    - MJRefresh
+    - MLeaksFinder
+    - Moya
+    - "NSObject+Rx"
+    - QuickLayout
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
+    - RxActivityIndicator
+    - RxCocoa
+    - RxDataSources
+    - RxReachability
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+    - SDWebImageFLPlugin
+    - SDWebImageWebPCoder
+    - SnapKit
+    - SwiftEntryKit
+    - SwiftRichString
+    - SwiftyBeaver
+    - SwiftyJSON
+    - URLNavigator
+    - XHLaunchAd
+    - ZFPlayer
+
+EXTERNAL SOURCES:
+  Toaster:
+    :commit: aec54fc48d3d36279424103de0784c23862d19df
+    :git: https://github.com/devxoul/Toaster
+
+CHECKOUT OPTIONS:
+  Toaster:
+    :commit: aec54fc48d3d36279424103de0784c23862d19df
+    :git: https://github.com/devxoul/Toaster
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  AutoInch: f2468bf8e33f7642699296db30240d3b3631ba33
+  DefaultsKit: 6c767941b2c3fe34c4d70e300e6c3b80c94964dd
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FLEX: dbd68ae9c67fcc872c79c9e5a728f38243dfaa78
+  GDPerformanceView-Swift: 22d964fe40b19e3d914dba2586237d064de8fd77
+  GKPageScrollViewSwift: 677939400ca324b34eeec6853ebebba0a4318c4b
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  HBDNavigationBar: 6ba38b99637039c831ce460364d5398f29fa0685
+  JXPagingView: 821ed274f09eaf2843a96c3a74e9d138e27d9730
+  JXSegmentedView: eb1cad21f57c2543c00c3e08b8fd3c7ca54f5acd
+  libwebp: 40fb682a65546d6e327e34372ec4317847e7323d
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  RxActivityIndicator: b337e29a8399d4c8dc250defaf5874221d9bd27e
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxReachability: 21d3e96f39bc166a21c357e923f47dec148ca97b
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  SDWebImageFLPlugin: 6c2295fb1242d44467c6c87dc5db6b0a13228fd8
+  SDWebImageWebPCoder: d0dac55073088d24b2ac1b191a71a8f8d0adac21
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftEntryKit: 537c92699d6034efb1ef9c32b11e0b37c97aa589
+  SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
+  SwiftyBeaver: 2e8acd6fc90c6d0a27055867a290794926d57c02
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Toaster: 33d27524fb6829cdb6b247c924beab0cfa001b3e
+  URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
+  XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
+  ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
+
+PODFILE CHECKSUM: 9fc18bb76bf5deb3b0ac5ac08f754c420e11f7e6
+
+COCOAPODS: 1.10.0

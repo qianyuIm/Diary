@@ -1,0 +1,10 @@
+/*
+  Localizable.strings
+  Qianyu
+
+  Created by cyd on 2020/12/28.
+  
+*/
+//MARK: -- tabbar
+"tab_home" = "首页";
+"tab_video" = "视频";
