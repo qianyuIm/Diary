@@ -8,23 +8,22 @@
 
 import UIKit
 
-class QYHomeController: UIViewController {
+class QYHomeController: QYBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "首页"
+        self.tabBarItem.badgeValue = "13"
+        let sender = UIButton(type: .custom)
+        sender.addTarget(self, action: #selector(click), for: .touchUpInside)
+        sender.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        sender.backgroundColor = .red
+        view.addSubview(sender)
+    }
+    @objc func click() {
+        self.tabBarItem.badgeValue = "12"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

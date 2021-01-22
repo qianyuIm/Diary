@@ -8,11 +8,9 @@
 import UIKit
 struct QYColor {
     /// tabbar
-    static let tabbarColor = color("#929292")
+    static let tabbarColor = color("#252528")
     /// tabbar
-    static let tabbarHighlightColor = color("#F83245")
-    /// 背景色
-    static let backgroundColor = color("#F7F8FA")
+    static let tabbarShadowColor = color("#252528")
     /// 主色 F83245
     static let mainColor = color("#F83245")
     /// placeholder

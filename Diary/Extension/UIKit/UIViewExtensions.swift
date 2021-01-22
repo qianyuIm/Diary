@@ -58,6 +58,16 @@ extension QianyuWrapper where Base: UIView {
             base.frame = rect
         }
     }
+    var origin: CGPoint {
+        get {
+            return base.frame.origin
+        }
+        nonmutating set {
+            var rect = base.frame
+            rect.origin = newValue
+            base.frame = rect
+        }
+    }
     /// 截图
     var screenshotImage: UIImage? {
         UIGraphicsBeginImageContextWithOptions(base.layer.frame.size, false, 0)
@@ -68,6 +78,7 @@ extension QianyuWrapper where Base: UIView {
         base.layer.render(in: context)
         return UIGraphicsGetImageFromCurrentImageContext()
     }
+    
     /// 获取视图的控制器
     var viewController: UIViewController? {
         var nextResponder: UIResponder? = base
@@ -111,4 +122,6 @@ extension QianyuWrapper where Base: UIView {
             base.layer.mask = shape
         }
     }
+    
+    
 }
