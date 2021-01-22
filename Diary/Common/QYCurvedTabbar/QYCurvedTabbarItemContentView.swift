@@ -81,7 +81,7 @@ class QYCurvedTabbarItemContentView: UIView, QYCurvedTabBarItemBadgeViewDelegate
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let hitTestView = super.hitTest(point, with: event)
         var targetView: UIView? = superview
-        if hitTestView == self.badgeView {
+        if hitTestView == self.badgeView && isSelected {
             targetView = self.badgeView
         }
         /// 默认传递给父视图来控制点击事件
