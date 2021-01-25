@@ -14,7 +14,7 @@ class QYBaseController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = .white
+        view.backgroundColor = QYColor.backgroundColor
     }
     
 }

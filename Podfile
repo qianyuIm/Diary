@@ -20,6 +20,7 @@ target 'Diary' do
   pod 'Toaster', :git => 'https://github.com/devxoul/Toaster', :commit => 'aec54fc48d3d36279424103de0784c23862d19df'
   # navigation
   pod 'HBDNavigationBar','~> 1.7.7'
+  pod 'UINavigation-SXFixSpace', '~> 1.2.4'
   # log
   pod 'SwiftyBeaver', '~> 1.9.1'
   # model
@@ -40,6 +41,8 @@ target 'Diary' do
   # image
   pod 'SDWebImageWebPCoder','~> 0.6.1'
   pod 'SDWebImageFLPlugin', '~> 0.4.0'
+  # IconFont
+  pod 'EFIconFont', '~> 0.8.1'
   # cache
   pod 'DefaultsKit', '~> 0.2.0'
   # route

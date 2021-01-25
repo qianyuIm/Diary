@@ -7,7 +7,10 @@
 //
 
 import UIKit
-
+enum QYTabBarItemContentMode : Int {
+    case alwaysOriginal // Always set the original image size
+    case alwaysTemplate // Always set the image as a template image size
+}
 class QYCurvedTabbarItemContentView: UIView, QYCurvedTabBarItemBadgeViewDelegate {
     /// 设置contentView的偏移
     var insets = UIEdgeInsets.zero
@@ -15,6 +18,11 @@ class QYCurvedTabbarItemContentView: UIView, QYCurvedTabBarItemBadgeViewDelegate
     private var centerYOffest: CGFloat = 40
     /// 是否被选中
     var isSelected = false
+    var itemContentMode: QYTabBarItemContentMode = .alwaysOriginal {
+       didSet {
+           self.updateDisplay()
+       }
+    }
     var image: UIImage? {
         didSet {
             if !isSelected { self.updateDisplay() }
@@ -111,14 +119,13 @@ class QYCurvedTabbarItemContentView: UIView, QYCurvedTabBarItemBadgeViewDelegate
     }
     /// 选中
     func selectAnimation(step: Int, animated: Bool, completion: (() -> ())?) {
-        completion?()
-        let animatedDuration = QYCurvedAnimationConfig.singleDuration 
+        let animatedDuration = QYCurvedAnimationConfig.singleDuration
         let delayDuration = QYCurvedAnimationConfig.singleDuration * Double(step) - animatedDuration
         UIView.animate(withDuration: animatedDuration, delay: delayDuration, options: []) {
             self.imageView.ext.y = self.imageCenterY + self.centerYOffest
             self.imageView.alpha = 0
         } completion: { (_) in
-            
+            completion?()
         }
     }
     /// 取消选中
@@ -138,6 +145,7 @@ class QYCurvedTabbarItemContentView: UIView, QYCurvedTabBarItemBadgeViewDelegate
     }
     /// 用于  1 2
     func stepAnimation(step: Int) {
+        
         let animatedDuration = QYCurvedAnimationConfig.singleDuration * 2
         let delayDuration = QYCurvedAnimationConfig.singleDuration * Double(step + 1) - animatedDuration
         UIView.animateKeyframes(withDuration: animatedDuration, delay: delayDuration, options: []) {
@@ -160,17 +168,23 @@ class QYCurvedTabbarItemContentView: UIView, QYCurvedTabBarItemBadgeViewDelegate
     func updateLayout() {
         let width = self.bounds.size.width
         let height = self.bounds.size.height
-        var imageSize: CGFloat = 0
-        if #available(iOS 11.0, *) {
-            imageSize = UIScreen.main.scale == 3.0 ? 23.0 : 20.0
+        var imageSize: CGSize = .zero
+        if self.itemContentMode == .alwaysOriginal {
+            imageView.sizeToFit()
+            imageSize = imageView.bounds.size
         } else {
-            imageSize = 23.0
+            if #available(iOS 11.0, *) {
+                imageSize = UIScreen.main.scale == 3.0 ? CGSize(width: 23, height: 23) : CGSize(width: 20, height: 20)
+            } else {
+                imageSize = CGSize(width: 23, height: 23)
+            }
         }
-        imageCenterY = (height - imageSize) / 2.0
-        imageView.frame = CGRect.init(x: (width - imageSize) / 2.0,
-                                      y: imageCenterY,
-                                      width: imageSize,
-                                      height: imageSize)
+        imageCenterY = (height - imageSize.height) / 2.0
+        imageView.frame = CGRect.init(x: (width - imageSize.width) / 2.0,
+                                        y: imageCenterY,
+                                        width: imageSize.width,
+                                        height: imageSize.height)
+        
         if let _ = badgeView.superview {
             let size = badgeView.sizeThatFits(self.frame.size)
             badgeView.frame = CGRect.init(origin: CGPoint.init(x: width / 2.0 + badgeOffset.horizontal, y: height / 2.0 + badgeOffset.vertical), size: size)

@@ -3,6 +3,9 @@ PODS:
   - AutoInch (2.1.0)
   - DefaultsKit (0.2.0)
   - Differentiator (4.0.1)
+  - EFIconFont (0.8.1):
+    - EFIconFont/Core (= 0.8.1)
+  - EFIconFont/Core (0.8.1)
   - FBRetainCycleDetector (0.1.4)
   - FLAnimatedImage (1.0.12)
   - FLEX (4.2.2)
@@ -68,6 +71,7 @@ PODS:
   - SwiftyBeaver (1.9.3)
   - SwiftyJSON (5.0.0)
   - Toaster (2.3.0)
+  - UINavigation-SXFixSpace (1.2.4)
   - URLNavigator (2.3.0)
   - XHLaunchAd (3.9.12):
     - FLAnimatedImage (~> 1.0.12)
@@ -80,6 +84,7 @@ PODS:
 DEPENDENCIES:
   - AutoInch (~> 2.1.0)
   - DefaultsKit (~> 0.2.0)
+  - EFIconFont (~> 0.8.1)
   - FLEX (~> 4.2.2)
   - GDPerformanceView-Swift (~> 2.1.1)
   - GKPageScrollViewSwift (~> 1.4.2)
@@ -104,6 +109,7 @@ DEPENDENCIES:
   - SwiftyBeaver (~> 1.9.1)
   - SwiftyJSON (~> 5.0.0)
   - Toaster (from `https://github.com/devxoul/Toaster`, commit `aec54fc48d3d36279424103de0784c23862d19df`)
+  - UINavigation-SXFixSpace (~> 1.2.4)
   - URLNavigator (~> 2.3.0)
   - XHLaunchAd (~> 3.9.12)
   - ZFPlayer/AVPlayer (~> 4.0.1)
@@ -115,6 +121,7 @@ SPEC REPOS:
     - AutoInch
     - DefaultsKit
     - Differentiator
+    - EFIconFont
     - FBRetainCycleDetector
     - FLAnimatedImage
     - FLEX
@@ -148,6 +155,7 @@ SPEC REPOS:
     - SwiftRichString
     - SwiftyBeaver
     - SwiftyJSON
+    - UINavigation-SXFixSpace
     - URLNavigator
     - XHLaunchAd
     - ZFPlayer
@@ -167,6 +175,7 @@ SPEC CHECKSUMS:
   AutoInch: f2468bf8e33f7642699296db30240d3b3631ba33
   DefaultsKit: 6c767941b2c3fe34c4d70e300e6c3b80c94964dd
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  EFIconFont: bb479fb9ae57bfe7dd73361ddfbcbf726b3d83a8
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FLEX: dbd68ae9c67fcc872c79c9e5a728f38243dfaa78
@@ -201,10 +210,11 @@ SPEC CHECKSUMS:
   SwiftyBeaver: 2e8acd6fc90c6d0a27055867a290794926d57c02
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toaster: 33d27524fb6829cdb6b247c924beab0cfa001b3e
+  UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
   ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: 9fc18bb76bf5deb3b0ac5ac08f754c420e11f7e6
+PODFILE CHECKSUM: 56ee9a6cd60cd90be800abd80d5bbf347d06fa53
 
 COCOAPODS: 1.10.0

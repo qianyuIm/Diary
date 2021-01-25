@@ -76,8 +76,11 @@
 		EF4E3C1225B6B24300001B5D /* QYCurvedTabbarBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E3C1125B6B24300001B5D /* QYCurvedTabbarBackgroundView.swift */; };
 		EF4E3C1525B6B29600001B5D /* QYCurvedTabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E3C1425B6B29600001B5D /* QYCurvedTabbarItemContentView.swift */; };
 		EF4E3C1825B6B79700001B5D /* QYCurvedTabbarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E3C1725B6B79700001B5D /* QYCurvedTabbarItemContainer.swift */; };
+		EF7EBB5E25BEC835007D0003 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF7EBB5D25BEC835007D0003 /* iconfont.ttf */; };
+		EF7EBB9625BECDCC007D0003 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EBB9525BECDCC007D0003 /* R.generated.swift */; };
 		EFC699F225B8055F000A9E5E /* QYCurvedAnimationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC699F125B8055F000A9E5E /* QYCurvedAnimationConfig.swift */; };
 		EFC699F525B82717000A9E5E /* QYCurvedSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC699F425B82717000A9E5E /* QYCurvedSelectedItem.swift */; };
+		EFD7931325BE66090093F5FD /* QYIconFontDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7931225BE66090093F5FD /* QYIconFontDiary.swift */; };
 		EFDC25EB25B96756006476C4 /* QYCurvedTabBarItemBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC25EA25B96756006476C4 /* QYCurvedTabBarItemBadgeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -157,8 +160,11 @@
 		EF4E3C1125B6B24300001B5D /* QYCurvedTabbarBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedTabbarBackgroundView.swift; sourceTree = "<group>"; };
 		EF4E3C1425B6B29600001B5D /* QYCurvedTabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedTabbarItemContentView.swift; sourceTree = "<group>"; };
 		EF4E3C1725B6B79700001B5D /* QYCurvedTabbarItemContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedTabbarItemContainer.swift; sourceTree = "<group>"; };
+		EF7EBB5D25BEC835007D0003 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		EF7EBB9525BECDCC007D0003 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		EFC699F125B8055F000A9E5E /* QYCurvedAnimationConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedAnimationConfig.swift; sourceTree = "<group>"; };
 		EFC699F425B82717000A9E5E /* QYCurvedSelectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedSelectedItem.swift; sourceTree = "<group>"; };
+		EFD7931225BE66090093F5FD /* QYIconFontDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYIconFontDiary.swift; sourceTree = "<group>"; };
 		EFDC25EA25B96756006476C4 /* QYCurvedTabBarItemBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedTabBarItemBadgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -421,6 +427,7 @@
 		EF4B129325B175A10055C4D2 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				EFD7931125BE65DA0093F5FD /* QYIconFont */,
 				EF4B12B325B175D60055C4D2 /* QYLabel */,
 				EF4B12B125B175D60055C4D2 /* QYLaunchAd */,
 				EF4B12AD25B175D60055C4D2 /* QYRouter */,
@@ -520,6 +527,7 @@
 		EF4B12BC25B175F10055C4D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EF7EBB9525BECDCC007D0003 /* R.generated.swift */,
 				EF4B10F625B148450055C4D2 /* Assets.xcassets */,
 				EF4B10F825B148450055C4D2 /* LaunchScreen.storyboard */,
 				EF4B10FB25B148450055C4D2 /* Info.plist */,
@@ -632,6 +640,15 @@
 			path = C;
 			sourceTree = "<group>";
 		};
+		EFD7931125BE65DA0093F5FD /* QYIconFont */ = {
+			isa = PBXGroup;
+			children = (
+				EF7EBB5D25BEC835007D0003 /* iconfont.ttf */,
+				EFD7931225BE66090093F5FD /* QYIconFontDiary.swift */,
+			);
+			path = QYIconFont;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -640,6 +657,7 @@
 			buildConfigurationList = EF4B10FE25B148450055C4D2 /* Build configuration list for PBXNativeTarget "Diary" */;
 			buildPhases = (
 				B607249CA36AFE8B7F5E4510 /* [CP] Check Pods Manifest.lock */,
+				EF7EBB9125BECCF3007D0003 /* R.swift */,
 				EF4B10E625B148430055C4D2 /* Sources */,
 				EF4B10E725B148430055C4D2 /* Frameworks */,
 				EF4B10E825B148430055C4D2 /* Resources */,
@@ -695,6 +713,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7EBB5E25BEC835007D0003 /* iconfont.ttf in Resources */,
 				EF4B10FA25B148450055C4D2 /* LaunchScreen.storyboard in Resources */,
 				EF4B132025B1782B0055C4D2 /* Localizable.strings in Resources */,
 				EF4B10F725B148450055C4D2 /* Assets.xcassets in Resources */,
@@ -760,6 +779,26 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Diary/Pods-Diary-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EF7EBB9125BECCF3007D0003 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/Diary/Resources/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Diary/Resources/R.generated.swift\" --generators image,string\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -824,6 +863,7 @@
 				EF4B123725B174370055C4D2 /* EmptyDataSetDelegate.swift in Sources */,
 				EF4E3BF725B6AABB00001B5D /* QYBaseController.swift in Sources */,
 				EF4B123425B174370055C4D2 /* EmptyDataSetView.swift in Sources */,
+				EF7EBB9625BECDCC007D0003 /* R.generated.swift in Sources */,
 				EF4E3BF225B6AA9500001B5D /* QYVideoController.swift in Sources */,
 				EF4B123925B174370055C4D2 /* ErrorTracker.swift in Sources */,
 				EF4B120F25B173490055C4D2 /* MJRefreshComponent+Rx.swift in Sources */,
@@ -833,6 +873,7 @@
 				EF4E3C0F25B6B1CA00001B5D /* QYCurvedTabbarItem.swift in Sources */,
 				EFDC25EB25B96756006476C4 /* QYCurvedTabBarItemBadgeView.swift in Sources */,
 				EF4B121025B173490055C4D2 /* MJRefreshFooter+Rx.swift in Sources */,
+				EFD7931325BE66090093F5FD /* QYIconFontDiary.swift in Sources */,
 				EF4B123825B174370055C4D2 /* EmptyDataSet.swift in Sources */,
 				EF4B12A525B175C00055C4D2 /* QYBorderButton.swift in Sources */,
 			);
@@ -986,8 +1027,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9W33GSKZVH;
 				INFOPLIST_FILE = "/Users/lipengyuan/Downloads/Git下载/自己写的/Diary/Diary/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -996,7 +1038,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianyuIm.diary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = RGenericId_dev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1008,8 +1050,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9W33GSKZVH;
 				INFOPLIST_FILE = "/Users/lipengyuan/Downloads/Git下载/自己写的/Diary/Diary/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1018,7 +1061,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianyuIm.diary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = RGenericId_dev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

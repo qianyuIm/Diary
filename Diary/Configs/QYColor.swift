@@ -11,6 +11,18 @@ struct QYColor {
     static let tabbarColor = color("#252528")
     /// tabbar
     static let tabbarShadowColor = color("#252528")
+    /// tabbar
+    static let tabbarNormalIconColor = color("#DDDDDD")
+    /// tabbar
+    static let tabbarSelectedIconColor = color("#DDDDDD")
+    /// navigationBar
+    static let navigationBarBarTintColor = color("#252528")
+    /// navigationBar
+    static let navigationBarTintColor = color("#DDDDDD")
+    /// navigationBar
+    static let navigationBarTitleTextColor = color("#DDDDDD")
+    /// backgroundColor
+    static let backgroundColor = color("#323232")
     /// 主色 F83245
     static let mainColor = color("#F83245")
     /// placeholder

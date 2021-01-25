@@ -14,7 +14,7 @@ class QYHomeController: QYBaseController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "首页"
+//        self.navigationItem.title = "首页"
         self.tabBarItem.badgeValue = "8"
         let sender = UIButton(type: .custom)
         sender.addTarget(self, action: #selector(click), for: .touchUpInside)
@@ -23,7 +23,10 @@ class QYHomeController: QYBaseController {
         view.addSubview(sender)
     }
     @objc func click() {
-        self.tabBarItem.badgeValue = "121"
+        self.tabBarItem.badgeValue = "1"
+        let vc = UIViewController()
+        vc.view.backgroundColor = QYColor.backgroundColor
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

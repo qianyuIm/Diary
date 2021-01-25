@@ -137,7 +137,11 @@ extension QYCurvedTabbar {
                 }
             }
             if let item = item as? QYCurvedTabbarItem {
-                item.contentView.select(step: step, animated: animated, completion: nil)
+                /// 禁止频繁点击
+                self.isUserInteractionEnabled = false
+                item.contentView.select(step: step, animated: animated) {[weak self] in
+                    self?.isUserInteractionEnabled = true
+                }
                 var currentContainer: QYCurvedTabbarItemContainer
                 if currentIndex == kTabbarInitializeIndex {
                     currentContainer = self.containers[newIndex]
