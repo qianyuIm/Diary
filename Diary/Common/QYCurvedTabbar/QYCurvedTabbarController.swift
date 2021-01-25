@@ -9,15 +9,15 @@
 import UIKit
 
 class QYCurvedTabbarController: UITabBarController {
-    fileprivate var ignoreNextSelection = false
+    fileprivate var isIgnoreCycleSelection = false
     override var selectedViewController: UIViewController? {
         willSet {
             guard let newValue = newValue else {
                 // if newValue == nil ...
                 return
             }
-            guard !ignoreNextSelection else {
-                ignoreNextSelection = false
+            guard !isIgnoreCycleSelection else {
+                isIgnoreCycleSelection = false
                 return
             }
             guard let tabBar = self.tabBar as? QYCurvedTabbar,
@@ -30,8 +30,8 @@ class QYCurvedTabbarController: UITabBarController {
     }
     override var selectedIndex: Int {
         willSet {
-            guard !ignoreNextSelection else {
-                ignoreNextSelection = false
+            guard !isIgnoreCycleSelection else {
+                isIgnoreCycleSelection = false
                 return
             }
             guard let tabBar = self.tabBar as? QYCurvedTabbar,
@@ -58,7 +58,7 @@ class QYCurvedTabbarController: UITabBarController {
             return;
         }
         if let selected = viewControllers?[idx] {
-            ignoreNextSelection = true
+            isIgnoreCycleSelection = true
             selectedIndex = idx
             delegate?.tabBarController?(self, didSelect: selected)
         }

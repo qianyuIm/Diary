@@ -32,7 +32,7 @@ class QYCurvedTabBarItemBadgeView: UIView {
         let badgeLabel = UILabel.init(frame: CGRect.zero)
         badgeLabel.backgroundColor = .clear
         badgeLabel.textColor = .white
-        badgeLabel.font = UIFont.systemFont(ofSize: 13.0)
+        badgeLabel.font = UIFont.systemFont(ofSize: 11.0)
         badgeLabel.textAlignment = .center
         return badgeLabel
     }()
@@ -92,7 +92,7 @@ class QYCurvedTabBarItemBadgeView: UIView {
             return CGSize.init(width: 18.0, height: 18.0)
         }
         let textSize = badgeLabel.sizeThatFits(CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
-        return CGSize.init(width: max(18.0, textSize.width + 10.0), height: max(18.0, textSize.width + 10.0))
+        return CGSize.init(width: max(18.0, textSize.width + 4.0), height: max(18.0, textSize.width + 4.0))
     }
     
     override func layoutSubviews() {

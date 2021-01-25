@@ -20,7 +20,6 @@ class QYCurvedSelectedItem: UIView {
         super.init(frame: CGRect(x: 0, y: kSelectedItemYOffset, width: size, height: size))
         commonInit()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -12,7 +12,7 @@ class QYCurvedTabbarItemContentView: UIView, QYCurvedTabBarItemBadgeViewDelegate
     /// 设置contentView的偏移
     var insets = UIEdgeInsets.zero
     private var imageCenterY: CGFloat = 0
-    var centerYOffest: CGFloat = 40
+    private var centerYOffest: CGFloat = 40
     /// 是否被选中
     var isSelected = false
     var image: UIImage? {
