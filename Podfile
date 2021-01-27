@@ -16,6 +16,10 @@ target 'Diary' do
   pod 'MBProgressHUD', '~> 1.2.0'
   # refresh
   pod 'MJRefresh', '~> 3.4.3'
+  # database
+  pod 'GRDB.swift'
+  # theme
+  pod 'SwiftTheme', '~> 0.5.5'
   # toast
   pod 'Toaster', :git => 'https://github.com/devxoul/Toaster', :commit => 'aec54fc48d3d36279424103de0784c23862d19df'
   # navigation
@@ -50,6 +54,10 @@ target 'Diary' do
   # player
   pod 'ZFPlayer/AVPlayer', '~> 4.0.1'
   pod 'ZFPlayer/ControlView'
+  # 极光
+  pod 'JMLink','~> 1.2.3'
+  pod 'JPush', '~> 3.3.6'
+  pod 'JCore', '~> 2.4.0-noidfa'
   # debug tool
   pod 'MLeaksFinder', :configurations => ['Debug']
   pod 'FLEX', '~> 4.2.2', :configurations => ['Debug']

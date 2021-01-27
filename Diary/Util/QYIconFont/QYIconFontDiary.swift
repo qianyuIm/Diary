@@ -31,5 +31,11 @@ enum QYIconFontDiaryIcons: String {
     case tabMine = "\u{e729}"
     
     //MARK: -- NavigationBar
-    case navigationBarBack = "\u{e62e}"
+    case navigationBarLeftFixedSpaceBack = "\u{e62e}"
+    case navigationBarSearch = "\u{e699}"
+    case navigationBarAdd = "\u{e62c}"
+    case navigationBarSet = "\u{e683}"
+    case navigationBarMore = "\u{e605}"
+
+
 }

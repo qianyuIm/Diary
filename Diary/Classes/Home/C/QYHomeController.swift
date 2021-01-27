@@ -9,7 +9,11 @@
 import UIKit
 
 class QYHomeController: QYBaseController {
-
+    lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,10 +27,29 @@ class QYHomeController: QYBaseController {
         view.addSubview(sender)
     }
     @objc func click() {
-        self.tabBarItem.badgeValue = "1"
-        let vc = UIViewController()
-        vc.view.backgroundColor = QYColor.backgroundColor
-        self.navigationController?.pushViewController(vc, animated: true)
+        let one = QYReaderStatisticalItem()
+        let date = Date()
+        one.date = dateFormatter.string(from: date)
+        one.timeInterval = 12345
+        QYReaderStatisticalItem.insert(statisticalItem: one)
+        one.timeInterval = 123454
+        QYReaderStatisticalItem.insert(statisticalItem: one)
+        let two = QYReaderStatisticalItem()
+        two.date = "2019-12-11"
+        two.timeInterval = 12345
+        QYReaderStatisticalItem.insert(statisticalItem: two)
+        let three = QYReaderStatisticalItem()
+        three.date = "2019-12-13"
+        three.timeInterval = 12345
+        QYReaderStatisticalItem.insert(statisticalItem: three)
+        let four = QYReaderStatisticalItem()
+        four.date = "2020-1-13"
+        four.timeInterval = 12345
+        QYReaderStatisticalItem.insert(statisticalItem: four)
+        let all = QYReaderStatisticalItem.queryAll()
+        all?.forEach({ (item) in
+            logDebug(item.date)
+        })
     }
     
 }

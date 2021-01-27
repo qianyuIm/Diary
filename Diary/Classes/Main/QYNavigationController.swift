@@ -27,7 +27,7 @@ class QYNavigationController: HBDNavigationController {
         if count > 0 {
             viewController.hidesBottomBarWhenPushed = true
             /// image 向左偏移 页面效果
-            let image = QYIconFontDiaryIcons.navigationBarBack.image(size: 24, foregroundColor: QYColor.navigationBarTintColor)
+            let image = QYIconFontDiaryIcons.navigationBarLeftFixedSpaceBack.image(size: 27, foregroundColor: QYColor.navigationBarTintColor)
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(backwardAction))
         }
         super.pushViewController(viewController, animated: animated)

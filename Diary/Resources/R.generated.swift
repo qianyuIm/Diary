@@ -5,6 +5,7 @@
 
 import Foundation
 import Rswift
+import UIKit
 
 /// This `R` struct is generated and contains references to static resources.
 struct R: Rswift.Validatable {
@@ -85,6 +86,30 @@ struct R: Rswift.Validatable {
 
   static func validate() throws {
     try intern.validate()
+  }
+
+  /// This `R.image` struct is generated, and contains static references to 2 images.
+  struct image {
+    /// Image `3dtouch_search`.
+    static let dtouch_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "3dtouch_search")
+    /// Image `3dtouch_wifi`.
+    static let dtouch_wifi = Rswift.ImageResource(bundle: R.hostingBundle, name: "3dtouch_wifi")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "3dtouch_search", bundle: ..., traitCollection: ...)`
+    static func dtouch_search(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dtouch_search, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "3dtouch_wifi", bundle: ..., traitCollection: ...)`
+    static func dtouch_wifi(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dtouch_wifi, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
   }
 
   fileprivate struct intern: Rswift.Validatable {

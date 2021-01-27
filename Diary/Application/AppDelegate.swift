@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initializeRoot()
         return true
     }
-
+    //MARK: 3D touch
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        completionHandler(handleShortcutItem(shortcutItem))
+    }
 }
 

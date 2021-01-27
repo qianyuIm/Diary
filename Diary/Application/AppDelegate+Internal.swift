@@ -30,5 +30,15 @@ extension AppDelegate {
         window?.rootViewController = tabbar
         window?.makeKeyAndVisible()
     }
+    /// 监听截屏
+    func screenshotTrack() {
+        QYScreenshotTrackHelper.track()
+    }
     
+}
+extension AppDelegate {
+    /// 3D touch
+    func handleShortcutItem(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
+        return QYShortcutItemHelper.handleShortcutItem(shortcutItem)
+    }
 }
