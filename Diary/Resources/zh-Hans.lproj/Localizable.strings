@@ -6,3 +6,7 @@
   
 */
 //MARK: -- tabbar
+"emptyTitle" = "数据为空";
+"emptyDescription" = "请稍后重试";
+"noConnectionEmptyTitle" = "无可用网络";
+"noConnectionEmptyDescription" = "请检查网络后点击页面刷新";

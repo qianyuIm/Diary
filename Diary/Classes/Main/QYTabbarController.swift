@@ -14,8 +14,8 @@ class QYTabbarController: QYCurvedTabbarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    
-        let home = subController(QYHomeController(),
+        
+        let home = subController(QYHomeController(style: .plain),
                                  normalIcon: QYIconFontDiaryIcons.tabHome,
                                  selectedIcon: QYIconFontDiaryIcons.tabHome)
         let bookShelf = subController(QYBookShelfController(),
@@ -31,7 +31,7 @@ class QYTabbarController: QYCurvedTabbarController {
                                  normalIcon: QYIconFontDiaryIcons.tabMine,
                                  selectedIcon: QYIconFontDiaryIcons.tabMine)
         viewControllers = [home, bookShelf, discovery, video, mine]
-        selectedIndex = 1
+        selectedIndex = 0
     }
     func normalImage(_ icon: QYIconFontDiaryIcons) -> UIImage? {
         return icon.image(size: 24, foregroundColor: QYColor.tabbarNormalIconColor)

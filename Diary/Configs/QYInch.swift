@@ -34,6 +34,8 @@ struct QYInch {
     static let isHighDensity: Bool = (scale < 3)
     /// line View Height 1/ scale
     static let lineViewHeight: CGFloat = 1 / scale
+    /// 空白视图高度
+    static let emptyViewHeight: CGFloat = 300
     /// 适配并进行像素向上取整
     static func value(_ value: CGFloat) -> CGFloat {
         return value.ext.autoFlat

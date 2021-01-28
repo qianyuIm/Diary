@@ -9,6 +9,8 @@ target 'Diary' do
   pod 'Moya/RxSwift', '~> 14.0.0'
   pod 'RxDataSources', '~> 4.0.1'
   pod 'RxReachability', '~> 1.0.0'
+  # Placeholder
+  pod 'EmptyDataSet-Swift'
   # layout
   pod 'SnapKit', '~> 5.0.1'
   pod 'AutoInch', '~> 2.1.0'
@@ -62,4 +64,11 @@ target 'Diary' do
   pod 'MLeaksFinder', :configurations => ['Debug']
   pod 'FLEX', '~> 4.2.2', :configurations => ['Debug']
   pod 'GDPerformanceView-Swift', '~> 2.1.1', :configurations => ['Debug']
+end
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
+        end
+    end
 end

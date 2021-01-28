@@ -46,7 +46,18 @@ extension QianyuWrapper where Base == String {
 }
 // MAEK: - Help
 extension QianyuWrapper where Base == String {
-    
+    func classType<T>() -> T.Type? {
+        guard let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
+            return nil
+        }
+        guard let nameSpaceClass = NSClassFromString(nameSpace + "." + base) else {
+            return nil
+        }
+        guard let classType = nameSpaceClass as? T.Type else {
+            return nil
+        }
+        return classType
+    }
     /// 根据宽高返回对应图片地址
     /// - Parameters:
     ///   - width: 宽度

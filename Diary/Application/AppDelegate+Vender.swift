@@ -18,6 +18,7 @@ extension AppDelegate {
         setupLeaksFinder()
         setupFLEX()
         setupSdWebImage()
+        setupReachability()
     }
 }
 
@@ -85,6 +86,9 @@ private extension AppDelegate {
         let webPCoder = SDImageWebPCoder.shared
         SDImageCodersManager.shared.addCoder(webPCoder)
         SDWebImageDownloader.shared.setValue("image/webp,image/*,*/*;q=0.8", forHTTPHeaderField:"Accept")
+    }
+    func setupReachability() {
+        QYReachabilityHelper.shared.startNotifier()
     }
 }
 //MARK:推送 -- JPUSHRegisterDelegate

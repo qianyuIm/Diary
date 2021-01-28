@@ -88,12 +88,16 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
 
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
     /// Image `3dtouch_search`.
     static let dtouch_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "3dtouch_search")
     /// Image `3dtouch_wifi`.
     static let dtouch_wifi = Rswift.ImageResource(bundle: R.hostingBundle, name: "3dtouch_wifi")
+    /// Image `icon_empty`.
+    static let icon_empty = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_empty")
+    /// Image `icon_no_connection`.
+    static let icon_no_connection = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_no_connection")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "3dtouch_search", bundle: ..., traitCollection: ...)`
@@ -108,6 +112,112 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.dtouch_wifi, compatibleWith: traitCollection)
     }
     #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_empty", bundle: ..., traitCollection: ...)`
+    static func icon_empty(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_empty, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_no_connection", bundle: ..., traitCollection: ...)`
+    static func icon_no_connection(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_no_connection, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
+  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  struct string {
+    /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
+    struct launchScreen {
+      fileprivate init() {}
+    }
+
+    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    struct localizable {
+      /// en translation: Please check the network then click page refresh
+      ///
+      /// Locales: en, zh-Hans
+      static let noConnectionEmptyDescription = Rswift.StringResource(key: "noConnectionEmptyDescription", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Please try again later
+      ///
+      /// Locales: en, zh-Hans
+      static let emptyDescription = Rswift.StringResource(key: "emptyDescription", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: There is no data
+      ///
+      /// Locales: en, zh-Hans
+      static let emptyTitle = Rswift.StringResource(key: "emptyTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Unavailable network
+      ///
+      /// Locales: en, zh-Hans
+      static let noConnectionEmptyTitle = Rswift.StringResource(key: "noConnectionEmptyTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+
+      /// en translation: Please check the network then click page refresh
+      ///
+      /// Locales: en, zh-Hans
+      static func noConnectionEmptyDescription(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("noConnectionEmptyDescription", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "noConnectionEmptyDescription"
+        }
+
+        return NSLocalizedString("noConnectionEmptyDescription", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Please try again later
+      ///
+      /// Locales: en, zh-Hans
+      static func emptyDescription(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("emptyDescription", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "emptyDescription"
+        }
+
+        return NSLocalizedString("emptyDescription", bundle: bundle, comment: "")
+      }
+
+      /// en translation: There is no data
+      ///
+      /// Locales: en, zh-Hans
+      static func emptyTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("emptyTitle", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "emptyTitle"
+        }
+
+        return NSLocalizedString("emptyTitle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Unavailable network
+      ///
+      /// Locales: en, zh-Hans
+      static func noConnectionEmptyTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("noConnectionEmptyTitle", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "noConnectionEmptyTitle"
+        }
+
+        return NSLocalizedString("noConnectionEmptyTitle", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
 
     fileprivate init() {}
   }

@@ -6,6 +6,11 @@
 //
 
 import UIKit
+/// 本地图片
+typealias LocalImage = R.image
+/// 本地字符创
+typealias LocalString = R.string.localizable
+
 struct QYConfigs {
     /// 路由
     static let routerSchemes = "qianyuDiary://"

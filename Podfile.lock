@@ -6,6 +6,7 @@ PODS:
   - EFIconFont (0.8.1):
     - EFIconFont/Core (= 0.8.1)
   - EFIconFont/Core (0.8.1)
+  - EmptyDataSet-Swift (5.0.0)
   - FBRetainCycleDetector (0.1.4)
   - FLAnimatedImage (1.0.12)
   - FLEX (4.2.2)
@@ -94,6 +95,7 @@ DEPENDENCIES:
   - AutoInch (~> 2.1.0)
   - DefaultsKit (~> 0.2.0)
   - EFIconFont (~> 0.8.1)
+  - EmptyDataSet-Swift
   - FLEX (~> 4.2.2)
   - GDPerformanceView-Swift (~> 2.1.1)
   - GKPageScrollViewSwift (~> 1.4.2)
@@ -136,6 +138,7 @@ SPEC REPOS:
     - DefaultsKit
     - Differentiator
     - EFIconFont
+    - EmptyDataSet-Swift
     - FBRetainCycleDetector
     - FLAnimatedImage
     - FLEX
@@ -195,6 +198,7 @@ SPEC CHECKSUMS:
   DefaultsKit: 6c767941b2c3fe34c4d70e300e6c3b80c94964dd
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   EFIconFont: bb479fb9ae57bfe7dd73361ddfbcbf726b3d83a8
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FLEX: dbd68ae9c67fcc872c79c9e5a728f38243dfaa78
@@ -239,6 +243,6 @@ SPEC CHECKSUMS:
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
   ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: 0d67927a402e632f0a113c7c92288fd30429384f
+PODFILE CHECKSUM: 455565ab19c65704e77c5b07ac77f1d4650e4b34
 
 COCOAPODS: 1.10.0

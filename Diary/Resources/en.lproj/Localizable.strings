@@ -6,3 +6,7 @@
   
 */
 //MARK: -- tabbar
+"emptyTitle" = "There is no data";
+"emptyDescription" = "Please try again later";
+"noConnectionEmptyTitle" = "Unavailable network";
+"noConnectionEmptyDescription" = "Please check the network then click page refresh";

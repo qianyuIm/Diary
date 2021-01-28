@@ -26,6 +26,7 @@ class QYMineController: QYBaseController {
         // Do any additional setup after loading the view.
         self.navigationItem.title = "我的"
         self.navigationItem.leftBarButtonItem = setBarButtonItem
+        
     }
     @objc func setBarButtonItemDidTap() {}
 }
