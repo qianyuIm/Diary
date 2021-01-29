@@ -88,7 +88,7 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
 
-  /// This `R.image` struct is generated, and contains static references to 4 images.
+  /// This `R.image` struct is generated, and contains static references to 7 images.
   struct image {
     /// Image `3dtouch_search`.
     static let dtouch_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "3dtouch_search")
@@ -96,6 +96,12 @@ struct R: Rswift.Validatable {
     static let dtouch_wifi = Rswift.ImageResource(bundle: R.hostingBundle, name: "3dtouch_wifi")
     /// Image `icon_empty`.
     static let icon_empty = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_empty")
+    /// Image `icon_hud_error`.
+    static let icon_hud_error = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_hud_error")
+    /// Image `icon_hud_success`.
+    static let icon_hud_success = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_hud_success")
+    /// Image `icon_hud_warning`.
+    static let icon_hud_warning = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_hud_warning")
     /// Image `icon_no_connection`.
     static let icon_no_connection = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_no_connection")
 
@@ -117,6 +123,27 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_empty", bundle: ..., traitCollection: ...)`
     static func icon_empty(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_empty, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_hud_error", bundle: ..., traitCollection: ...)`
+    static func icon_hud_error(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_hud_error, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_hud_success", bundle: ..., traitCollection: ...)`
+    static func icon_hud_success(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_hud_success, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_hud_warning", bundle: ..., traitCollection: ...)`
+    static func icon_hud_warning(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_hud_warning, compatibleWith: traitCollection)
     }
     #endif
 

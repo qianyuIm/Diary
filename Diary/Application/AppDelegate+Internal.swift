@@ -29,10 +29,16 @@ extension AppDelegate {
         let tabbar = QYTabbarController()
         window?.rootViewController = tabbar
         window?.makeKeyAndVisible()
+        screenshotTrack()
+        alertPrivacyPolicy()
     }
     /// 监听截屏
     func screenshotTrack() {
         QYScreenshotTrackHelper.track()
+    }
+    /// 启动隐私协议
+    func alertPrivacyPolicy() {
+        QYAlert.alertPrivacyPolicy()
     }
     
 }

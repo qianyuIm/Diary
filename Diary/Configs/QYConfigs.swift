@@ -15,7 +15,16 @@ struct QYConfigs {
     /// 路由
     static let routerSchemes = "qianyuDiary://"
     static let channel = "pgy"
-    static let version = "1.0"
+    private static var _version: String?
+    static var version: String {
+        guard let version = _version else {
+            _version = (Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String) ?? "1.0"
+            return _version!
+        }
+        return version
+    }
+    /// app 名称
+    static let appName = "Diary"
     static let alias = "Diary"
     static let groupId = "group.com.qianyuIm.QYKit"
     struct Notification {

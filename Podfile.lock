@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.1)
+  - AttributedString (1.6.8)
   - AutoInch (2.1.0)
   - DefaultsKit (0.2.0)
   - Differentiator (4.0.1)
@@ -92,6 +93,7 @@ PODS:
   - ZFPlayer/Core (4.0.1)
 
 DEPENDENCIES:
+  - AttributedString
   - AutoInch (~> 2.1.0)
   - DefaultsKit (~> 0.2.0)
   - EFIconFont (~> 0.8.1)
@@ -134,6 +136,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - AttributedString
     - AutoInch
     - DefaultsKit
     - Differentiator
@@ -194,6 +197,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  AttributedString: 20191014381c897ea03bd6733a21b8f6e98145d1
   AutoInch: f2468bf8e33f7642699296db30240d3b3631ba33
   DefaultsKit: 6c767941b2c3fe34c4d70e300e6c3b80c94964dd
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
@@ -243,6 +247,6 @@ SPEC CHECKSUMS:
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
   ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: 455565ab19c65704e77c5b07ac77f1d4650e4b34
+PODFILE CHECKSUM: 23a19f6d46691ecfa0e6da9f575c3e20c111543d
 
 COCOAPODS: 1.10.0

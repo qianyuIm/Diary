@@ -144,8 +144,12 @@ private extension QYAlert {
                 radius: 5
             )
         )
-        attributes.positionConstraints.maxSize = .init(
-            width: .constant(value: UIScreen.main.bounds.width),
+//        attributes.positionConstraints.maxSize = .init(
+//            width: .constant(value: UIScreen.main.bounds.width),
+//            height: .intrinsic
+//        )
+        attributes.positionConstraints.size = .init(
+            width: .constant(value: UIScreen.main.bounds.width - 80),
             height: .intrinsic
         )
         return attributes

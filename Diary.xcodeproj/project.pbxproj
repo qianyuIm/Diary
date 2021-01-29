@@ -89,6 +89,8 @@
 		EF4E3C1525B6B29600001B5D /* QYCurvedTabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E3C1425B6B29600001B5D /* QYCurvedTabbarItemContentView.swift */; };
 		EF4E3C1825B6B79700001B5D /* QYCurvedTabbarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E3C1725B6B79700001B5D /* QYCurvedTabbarItemContainer.swift */; };
 		EF7EBB9625BECDCC007D0003 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EBB9525BECDCC007D0003 /* R.generated.swift */; };
+		EF8793B225C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */; };
+		EF9B3B9125C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */; };
 		EFB05CA725C1479600D4EECA /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB05CA625C1479600D4EECA /* BundleExtensions.swift */; };
 		EFB05CEA25C167FA00D4EECA /* QYJPUSHHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB05CE925C167FA00D4EECA /* QYJPUSHHelper.swift */; };
 		EFB05CEE25C1689F00D4EECA /* QYKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB05CED25C1689F00D4EECA /* QYKey.swift */; };
@@ -195,6 +197,8 @@
 		EF4E3C1425B6B29600001B5D /* QYCurvedTabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedTabbarItemContentView.swift; sourceTree = "<group>"; };
 		EF4E3C1725B6B79700001B5D /* QYCurvedTabbarItemContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedTabbarItemContainer.swift; sourceTree = "<group>"; };
 		EF7EBB9525BECDCC007D0003 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYColor+PrivacyPolicy.swift"; sourceTree = "<group>"; };
+		EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYAlert+PrivacyPolicy.swift"; sourceTree = "<group>"; };
 		EFB05CA625C1479600D4EECA /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		EFB05CAE25C1669C00D4EECA /* Diary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Diary.entitlements; sourceTree = "<group>"; };
 		EFB05CE225C1676700D4EECA /* Diary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Diary-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				EF15E5D725C2865900DCE201 /* QYRequest.swift */,
+				EFD13E1225C2D2AA0077D10F /* Reader */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -532,7 +537,7 @@
 		EF4B124C25B1745B0055C4D2 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
-				EF4B125125B1748D0055C4D2 /* QYColor.swift */,
+				EF8793B025C3ABE200AD4090 /* Color */,
 				EF4B124F25B1748D0055C4D2 /* QYConfigs.swift */,
 				EF4B125325B1748D0055C4D2 /* QYFont.swift */,
 				EF4B124E25B1748D0055C4D2 /* QYHeaders.swift */,
@@ -593,6 +598,7 @@
 		EF4B129D25B175B80055C4D2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -773,6 +779,15 @@
 			path = C;
 			sourceTree = "<group>";
 		};
+		EF8793B025C3ABE200AD4090 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B125125B1748D0055C4D2 /* QYColor.swift */,
+				EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 		EFB05CAA25C1641B00D4EECA /* menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -852,6 +867,13 @@
 				EFB207DF25C1366100B5C353 /* QYReaderConfig+ReaderTheme.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		EFD13E1225C2D2AA0077D10F /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reader;
 			sourceTree = "<group>";
 		};
 		EFD7931125BE65DA0093F5FD /* QYIconFont */ = {
@@ -1022,6 +1044,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8793B225C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift in Sources */,
 				EF4B125725B1748D0055C4D2 /* QYHeaders.swift in Sources */,
 				EF4E3C1525B6B29600001B5D /* QYCurvedTabbarItemContentView.swift in Sources */,
 				EF4B121525B173490055C4D2 /* QianyuWrapper.swift in Sources */,
@@ -1103,6 +1126,7 @@
 				EF4B123925B174370055C4D2 /* ErrorTracker.swift in Sources */,
 				EF4B120F25B173490055C4D2 /* MJRefreshComponent+Rx.swift in Sources */,
 				EF4B131625B177050055C4D2 /* EmptyDataSet+Rx.swift in Sources */,
+				EF9B3B9125C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift in Sources */,
 				EFB05CEA25C167FA00D4EECA /* QYJPUSHHelper.swift in Sources */,
 				EF15E5A125C261A500DCE201 /* QYReachabilityHelper.swift in Sources */,
 				EF15E5F125C2945C00DCE201 /* QYVMCollectionController.swift in Sources */,

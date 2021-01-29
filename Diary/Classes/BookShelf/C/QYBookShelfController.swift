@@ -46,5 +46,7 @@ class QYBookShelfController: QYBaseController {
         let box = QYReaderBoxController()
         self.navigationController?.pushViewController(box, animated: true)
     }
-    @objc func addBarButtonItemDidTap() {}
+    @objc func addBarButtonItemDidTap() {
+        QYAlert.alert(title: "123", message: "123", cancel: "123", done: "123", doneAction: nil, cancelAction: nil)
+    }
 }

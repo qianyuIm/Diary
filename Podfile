@@ -34,6 +34,7 @@ target 'Diary' do
   pod 'SwiftyJSON', '~> 5.0.0'
   # attribute
   pod 'SwiftRichString','~> 3.7.2'
+  pod 'AttributedString','~> 1.6.8'
   # Tools
   pod 'R.swift', '~> 5.3.0'
   # launch Ad

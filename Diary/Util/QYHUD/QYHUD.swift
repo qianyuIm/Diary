@@ -73,8 +73,9 @@ class QYHUD {
         hud.isUserInteractionEnabled = isInteraction
         hud.contentColor = .white
         hud.margin = 25
+        hud.mode = .indeterminate
         hud.bezelView.style = .blur
-        hud.bezelView.blurEffectStyle = .dark
+        hud.bezelView.blurEffectStyle = .regular
         hud.backgroundView.style = .solidColor
         return hud
     }

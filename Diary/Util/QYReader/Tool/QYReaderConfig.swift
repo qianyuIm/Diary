@@ -9,6 +9,7 @@
 import UIKit
 import DefaultsKit
 extension DefaultsKey {
+    /// 阅读配置
     static let kLastReadConfigKey = Key<QYReaderConfig>("qy_lastReadConfigKey")
 }
 
