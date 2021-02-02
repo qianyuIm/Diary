@@ -34,7 +34,7 @@ extension QYCurvedTabbarBackgroundView {
             calculateBorderPath(for: toCenterX, depthScale: 1)
         ]
         animation.keyTimes = [0,0.5,1]
-        animation.duration = QYCurvedAnimationConfig.singleDuration * Double(step)
+        animation.duration = QYCurvedAnimationConfig.animationDuration(step)
         animation.isRemovedOnCompletion = false
         animation.fillMode = .both
         borderLayer.add(animation, forKey: #keyPath(CAShapeLayer.path))

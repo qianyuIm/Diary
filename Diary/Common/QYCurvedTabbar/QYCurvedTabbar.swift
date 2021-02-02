@@ -11,6 +11,7 @@ import UIKit
 class QYCurvedTabbar: UITabBar {
     var containers = [QYCurvedTabbarItemContainer]()
     var contentViews = [QYCurvedTabbarItemContentView]()
+    private var isLayout: Bool = false
     // 深度
     lazy var calculatePitDepth: CGFloat = {
         let percentage: CGFloat = QYInch.isIphoneX ? 1 : 0.8
@@ -115,9 +116,13 @@ extension QYCurvedTabbar {
         guard let container = sender as? QYCurvedTabbarItemContainer else {
             return
         }
-        /// 使用它的原因是 首次加载 frame没有计算出来
-        DispatchQueue.main.async {
+        if isLayout {
             self.select(itemAtIndex: container.tag - kTabbarItemContaineTag, animated: true)
+        } else {
+            /// 使用它的原因是 首次加载 frame没有计算出来
+            DispatchQueue.main.async {
+                self.select(itemAtIndex: container.tag - kTabbarItemContaineTag, animated: true)
+            }
         }
     }
     func select(itemAtIndex idx: Int, animated: Bool) {
@@ -207,6 +212,7 @@ extension QYCurvedTabbar {
         for (_, container) in containers.enumerated(){
             container.isHidden = false
         }
+        isLayout = true
         curvedBackgroundView.frame = CGRect(x: 0, y: 0, width: QYInch.screenWidth, height: QYInch.tabbarHeight)
         for (idx, container) in containers.enumerated(){
             if !tabBarButtons[idx].frame.isEmpty {

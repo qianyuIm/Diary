@@ -7,8 +7,12 @@
 //
 
 import UIKit
+enum QYCurvedTabbarOperation {
+    case toRight
+    case toLeft
+}
 
-class QYCurvedTabbarController: UITabBarController {
+class QYCurvedTabbarController: UITabBarController,UITabBarControllerDelegate {
     fileprivate var isIgnoreCycleSelection = false
     override var selectedViewController: UIViewController? {
         willSet {
@@ -41,6 +45,10 @@ class QYCurvedTabbarController: UITabBarController {
             tabBar.select(itemAtIndex: newValue, animated: false)
         }
     }
+    lazy var curvedAnimatedTransitioning: QYCurvedAnimatedTransitioning = {
+        let curvedAnimatedTransitioning = QYCurvedAnimatedTransitioning()
+        return curvedAnimatedTransitioning
+    }()
     /// Customize set tabBar use KVC.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +60,7 @@ class QYCurvedTabbarController: UITabBarController {
             return tabBar
         }()
         self.setValue(tabBar, forKey: "tabBar")
+        self.delegate = self
     }
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         guard let idx = tabBar.items?.firstIndex(of: item) else {
@@ -62,5 +71,18 @@ class QYCurvedTabbarController: UITabBarController {
             selectedIndex = idx
             delegate?.tabBarController?(self, didSelect: selected)
         }
+    }
+    func tabBarController(_ tabBarController: UITabBarController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return nil
+    }
+    func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let fromVCIndex = tabBarController.children.firstIndex(of: fromVC)!
+        let toVCIndex = tabBarController.children.firstIndex(of: toVC)!
+        let operation : QYCurvedTabbarOperation = toVCIndex > fromVCIndex ? .toRight : .toLeft
+        let step = abs(fromVCIndex - toVCIndex)
+        let duration = QYCurvedAnimationConfig.animationDuration(step)
+        curvedAnimatedTransitioning.operation = operation
+        curvedAnimatedTransitioning.duration = duration
+        return curvedAnimatedTransitioning
     }
 }

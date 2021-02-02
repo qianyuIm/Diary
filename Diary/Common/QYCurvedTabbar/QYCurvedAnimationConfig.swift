@@ -9,7 +9,15 @@
 import UIKit
 
 struct QYCurvedAnimationConfig {
-    static let singleDuration: CFTimeInterval = 0.35    
+    static func singleDuration(_ step: Int) ->  CFTimeInterval {
+        if step == 1 {
+            return 0.35
+        }
+        return 0.25
+    }
+    static func animationDuration(_ step: Int) -> CFTimeInterval {
+        return singleDuration(step) * Double(step)
+    }
     /// 返回坑宽度
     /// - Parameter maxPitDepth: 坑最大深度
     /// - Returns:

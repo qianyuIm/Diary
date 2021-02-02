@@ -7,3 +7,5 @@
 // 百度在线语音合成
 //#import "BDSSpeechSynthesizer.h"
 //#import "BDSBuiltInPlayer.h"
+// 启动广告
+#import "XHLaunchAd.h"

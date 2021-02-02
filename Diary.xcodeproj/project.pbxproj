@@ -99,12 +99,29 @@
 		EFB05D2C25C1728700D4EECA /* QYScreenshotTrackHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB05D2B25C1728700D4EECA /* QYScreenshotTrackHelper.swift */; };
 		EFB2079D25C0F9A000B5C353 /* QYDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2079C25C0F9A000B5C353 /* QYDataBaseManager.swift */; };
 		EFB207D125C117EE00B5C353 /* QYReader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFB207D025C117EE00B5C353 /* QYReader.bundle */; };
-		EFB207D525C132A500B5C353 /* QYReaderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB207D425C132A500B5C353 /* QYReaderApi.swift */; };
 		EFB207DD25C1350500B5C353 /* QYReaderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB207DC25C1350500B5C353 /* QYReaderConfig.swift */; };
 		EFB207E025C1366100B5C353 /* QYReaderConfig+ReaderTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB207DF25C1366100B5C353 /* QYReaderConfig+ReaderTheme.swift */; };
 		EFC699F225B8055F000A9E5E /* QYCurvedAnimationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC699F125B8055F000A9E5E /* QYCurvedAnimationConfig.swift */; };
 		EFC699F525B82717000A9E5E /* QYCurvedSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC699F425B82717000A9E5E /* QYCurvedSelectedItem.swift */; };
+		EFD0BA2625C7E53700B572EB /* QYCurvedAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0BA2525C7E53700B572EB /* QYCurvedAnimatedTransitioning.swift */; };
 		EFD7931325BE66090093F5FD /* QYIconFontDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7931225BE66090093F5FD /* QYIconFontDiary.swift */; };
+		EFD8C31725C8FBA500F740B5 /* QYReaderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C31625C8FBA500F740B5 /* QYReaderApi.swift */; };
+		EFD8C35025C8FDC400F740B5 /* QYReaderInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C34F25C8FDC400F740B5 /* QYReaderInfoController.swift */; };
+		EFD8C35325C8FDFD00F740B5 /* QYReaderInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C35225C8FDFD00F740B5 /* QYReaderInfoViewModel.swift */; };
+		EFD8C35625C8FE6600F740B5 /* QYReaderInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C35525C8FE6600F740B5 /* QYReaderInfoModel.swift */; };
+		EFD8C40D25C9213700F740B5 /* XHLaunchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C3FA25C9213700F740B5 /* XHLaunchAdView.m */; };
+		EFD8C40E25C9213700F740B5 /* XHLaunchAdButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C3FD25C9213700F740B5 /* XHLaunchAdButton.m */; };
+		EFD8C40F25C9213700F740B5 /* XHLaunchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C3FF25C9213700F740B5 /* XHLaunchImageView.m */; };
+		EFD8C41025C9213700F740B5 /* XHLaunchAdConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C40025C9213700F740B5 /* XHLaunchAdConst.m */; };
+		EFD8C41125C9213700F740B5 /* XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C40225C9213700F740B5 /* XHLaunchAd.m */; };
+		EFD8C41225C9213700F740B5 /* XHLaunchAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C40325C9213700F740B5 /* XHLaunchAdController.m */; };
+		EFD8C41325C9213700F740B5 /* XHLaunchAdDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C40425C9213700F740B5 /* XHLaunchAdDownloader.m */; };
+		EFD8C41425C9213700F740B5 /* XHLaunchAdImageView+XHLaunchAdCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C40625C9213700F740B5 /* XHLaunchAdImageView+XHLaunchAdCache.m */; };
+		EFD8C41525C9213700F740B5 /* XHLaunchAdConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C40725C9213700F740B5 /* XHLaunchAdConfiguration.m */; };
+		EFD8C41625C9213700F740B5 /* XHLaunchAdCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C40925C9213700F740B5 /* XHLaunchAdCache.m */; };
+		EFD8C41725C9213700F740B5 /* XHLaunchAdImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C40B25C9213700F740B5 /* XHLaunchAdImageManager.m */; };
+		EFD8C41D25C9333500F740B5 /* QYReaderInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C41C25C9333500F740B5 /* QYReaderInfoHeaderView.swift */; };
+		EFD8C42125C9357800F740B5 /* QYReaderInfoChaptersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C42025C9357800F740B5 /* QYReaderInfoChaptersView.swift */; };
 		EFDC25EB25B96756006476C4 /* QYCurvedTabBarItemBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC25EA25B96756006476C4 /* QYCurvedTabBarItemBadgeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -209,12 +226,40 @@
 		EFB05D2B25C1728700D4EECA /* QYScreenshotTrackHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYScreenshotTrackHelper.swift; sourceTree = "<group>"; };
 		EFB2079C25C0F9A000B5C353 /* QYDataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYDataBaseManager.swift; sourceTree = "<group>"; };
 		EFB207D025C117EE00B5C353 /* QYReader.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QYReader.bundle; sourceTree = "<group>"; };
-		EFB207D425C132A500B5C353 /* QYReaderApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderApi.swift; sourceTree = "<group>"; };
 		EFB207DC25C1350500B5C353 /* QYReaderConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderConfig.swift; sourceTree = "<group>"; };
 		EFB207DF25C1366100B5C353 /* QYReaderConfig+ReaderTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYReaderConfig+ReaderTheme.swift"; sourceTree = "<group>"; };
 		EFC699F125B8055F000A9E5E /* QYCurvedAnimationConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedAnimationConfig.swift; sourceTree = "<group>"; };
 		EFC699F425B82717000A9E5E /* QYCurvedSelectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedSelectedItem.swift; sourceTree = "<group>"; };
+		EFD0BA2525C7E53700B572EB /* QYCurvedAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		EFD7931225BE66090093F5FD /* QYIconFontDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYIconFontDiary.swift; sourceTree = "<group>"; };
+		EFD8C31625C8FBA500F740B5 /* QYReaderApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QYReaderApi.swift; path = ../../../Api/Reader/QYReaderApi.swift; sourceTree = "<group>"; };
+		EFD8C34F25C8FDC400F740B5 /* QYReaderInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderInfoController.swift; sourceTree = "<group>"; };
+		EFD8C35225C8FDFD00F740B5 /* QYReaderInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderInfoViewModel.swift; sourceTree = "<group>"; };
+		EFD8C35525C8FE6600F740B5 /* QYReaderInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderInfoModel.swift; sourceTree = "<group>"; };
+		EFD8C3F725C9213700F740B5 /* XHLaunchAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdController.h; sourceTree = "<group>"; };
+		EFD8C3F825C9213700F740B5 /* XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAd.h; sourceTree = "<group>"; };
+		EFD8C3F925C9213700F740B5 /* XHLaunchAdDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdDownloader.h; sourceTree = "<group>"; };
+		EFD8C3FA25C9213700F740B5 /* XHLaunchAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdView.m; sourceTree = "<group>"; };
+		EFD8C3FB25C9213700F740B5 /* XHLaunchAdCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdCache.h; sourceTree = "<group>"; };
+		EFD8C3FC25C9213700F740B5 /* XHLaunchAdConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdConfiguration.h; sourceTree = "<group>"; };
+		EFD8C3FD25C9213700F740B5 /* XHLaunchAdButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdButton.m; sourceTree = "<group>"; };
+		EFD8C3FE25C9213700F740B5 /* XHLaunchAdImageView+XHLaunchAdCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XHLaunchAdImageView+XHLaunchAdCache.h"; sourceTree = "<group>"; };
+		EFD8C3FF25C9213700F740B5 /* XHLaunchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchImageView.m; sourceTree = "<group>"; };
+		EFD8C40025C9213700F740B5 /* XHLaunchAdConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdConst.m; sourceTree = "<group>"; };
+		EFD8C40125C9213700F740B5 /* XHLaunchAdImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdImageManager.h; sourceTree = "<group>"; };
+		EFD8C40225C9213700F740B5 /* XHLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAd.m; sourceTree = "<group>"; };
+		EFD8C40325C9213700F740B5 /* XHLaunchAdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdController.m; sourceTree = "<group>"; };
+		EFD8C40425C9213700F740B5 /* XHLaunchAdDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdDownloader.m; sourceTree = "<group>"; };
+		EFD8C40525C9213700F740B5 /* XHLaunchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchImageView.h; sourceTree = "<group>"; };
+		EFD8C40625C9213700F740B5 /* XHLaunchAdImageView+XHLaunchAdCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XHLaunchAdImageView+XHLaunchAdCache.m"; sourceTree = "<group>"; };
+		EFD8C40725C9213700F740B5 /* XHLaunchAdConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdConfiguration.m; sourceTree = "<group>"; };
+		EFD8C40825C9213700F740B5 /* XHLaunchAdButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdButton.h; sourceTree = "<group>"; };
+		EFD8C40925C9213700F740B5 /* XHLaunchAdCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdCache.m; sourceTree = "<group>"; };
+		EFD8C40A25C9213700F740B5 /* XHLaunchAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdView.h; sourceTree = "<group>"; };
+		EFD8C40B25C9213700F740B5 /* XHLaunchAdImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdImageManager.m; sourceTree = "<group>"; };
+		EFD8C40C25C9213700F740B5 /* XHLaunchAdConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdConst.h; sourceTree = "<group>"; };
+		EFD8C41C25C9333500F740B5 /* QYReaderInfoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderInfoHeaderView.swift; sourceTree = "<group>"; };
+		EFD8C42025C9357800F740B5 /* QYReaderInfoChaptersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderInfoChaptersView.swift; sourceTree = "<group>"; };
 		EFDC25EA25B96756006476C4 /* QYCurvedTabBarItemBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedTabBarItemBadgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -298,7 +343,6 @@
 			isa = PBXGroup;
 			children = (
 				EF15E5D725C2865900DCE201 /* QYRequest.swift */,
-				EFD13E1225C2D2AA0077D10F /* Reader */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -504,6 +548,7 @@
 		EF4B122825B174260055C4D2 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				EFD8C3F625C9213700F740B5 /* XHLaunchAd-custom */,
 				EF4B122925B174370055C4D2 /* CHTCollectionViewWaterfallLayout */,
 				EF4B123125B174370055C4D2 /* RxErrorTracker */,
 			);
@@ -679,6 +724,7 @@
 			isa = PBXGroup;
 			children = (
 				EF4E3BDC25B67CA700001B5D /* QYCurvedTabbarController.swift */,
+				EFD0BA2525C7E53700B572EB /* QYCurvedAnimatedTransitioning.swift */,
 				EF4E3BDF25B67CBD00001B5D /* QYCurvedTabbar.swift */,
 				EF4E3C0E25B6B1CA00001B5D /* QYCurvedTabbarItem.swift */,
 				EF4E3C1125B6B24300001B5D /* QYCurvedTabbarBackgroundView.swift */,
@@ -818,6 +864,7 @@
 			isa = PBXGroup;
 			children = (
 				EF0ADABA25C00A28004F9BFC /* QYReaderBoxController.swift */,
+				EFD8C34F25C8FDC400F740B5 /* QYReaderInfoController.swift */,
 			);
 			path = reader;
 			sourceTree = "<group>";
@@ -833,7 +880,7 @@
 		EFB207D325C1329500B5C353 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				EFB207D425C132A500B5C353 /* QYReaderApi.swift */,
+				EFD8C31625C8FBA500F740B5 /* QYReaderApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -841,6 +888,7 @@
 		EFB207D725C133AF00B5C353 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				EFD8C41B25C9331B00F740B5 /* Info */,
 				EFB05CAA25C1641B00D4EECA /* menu */,
 			);
 			path = V;
@@ -849,6 +897,7 @@
 		EFB207D825C133B400B5C353 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				EFD8C35525C8FE6600F740B5 /* QYReaderInfoModel.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -856,6 +905,7 @@
 		EFB207D925C133BA00B5C353 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				EFD8C35225C8FDFD00F740B5 /* QYReaderInfoViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -869,13 +919,6 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
-		EFD13E1225C2D2AA0077D10F /* Reader */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reader;
-			sourceTree = "<group>";
-		};
 		EFD7931125BE65DA0093F5FD /* QYIconFont */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,6 +926,44 @@
 				EFD7931225BE66090093F5FD /* QYIconFontDiary.swift */,
 			);
 			path = QYIconFont;
+			sourceTree = "<group>";
+		};
+		EFD8C3F625C9213700F740B5 /* XHLaunchAd-custom */ = {
+			isa = PBXGroup;
+			children = (
+				EFD8C3F725C9213700F740B5 /* XHLaunchAdController.h */,
+				EFD8C3F825C9213700F740B5 /* XHLaunchAd.h */,
+				EFD8C3F925C9213700F740B5 /* XHLaunchAdDownloader.h */,
+				EFD8C3FA25C9213700F740B5 /* XHLaunchAdView.m */,
+				EFD8C3FB25C9213700F740B5 /* XHLaunchAdCache.h */,
+				EFD8C3FC25C9213700F740B5 /* XHLaunchAdConfiguration.h */,
+				EFD8C3FD25C9213700F740B5 /* XHLaunchAdButton.m */,
+				EFD8C3FE25C9213700F740B5 /* XHLaunchAdImageView+XHLaunchAdCache.h */,
+				EFD8C3FF25C9213700F740B5 /* XHLaunchImageView.m */,
+				EFD8C40025C9213700F740B5 /* XHLaunchAdConst.m */,
+				EFD8C40125C9213700F740B5 /* XHLaunchAdImageManager.h */,
+				EFD8C40225C9213700F740B5 /* XHLaunchAd.m */,
+				EFD8C40325C9213700F740B5 /* XHLaunchAdController.m */,
+				EFD8C40425C9213700F740B5 /* XHLaunchAdDownloader.m */,
+				EFD8C40525C9213700F740B5 /* XHLaunchImageView.h */,
+				EFD8C40625C9213700F740B5 /* XHLaunchAdImageView+XHLaunchAdCache.m */,
+				EFD8C40725C9213700F740B5 /* XHLaunchAdConfiguration.m */,
+				EFD8C40825C9213700F740B5 /* XHLaunchAdButton.h */,
+				EFD8C40925C9213700F740B5 /* XHLaunchAdCache.m */,
+				EFD8C40A25C9213700F740B5 /* XHLaunchAdView.h */,
+				EFD8C40B25C9213700F740B5 /* XHLaunchAdImageManager.m */,
+				EFD8C40C25C9213700F740B5 /* XHLaunchAdConst.h */,
+			);
+			path = "XHLaunchAd-custom";
+			sourceTree = "<group>";
+		};
+		EFD8C41B25C9331B00F740B5 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				EFD8C41C25C9333500F740B5 /* QYReaderInfoHeaderView.swift */,
+				EFD8C42025C9357800F740B5 /* QYReaderInfoChaptersView.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1052,15 +1133,19 @@
 				EF4B12B625B175D60055C4D2 /* QYRouter.swift in Sources */,
 				EF4E3BFC25B6AAEB00001B5D /* QYMineController.swift in Sources */,
 				EF4B11E025B172200055C4D2 /* QYNavigationController.swift in Sources */,
+				EFD8C41525C9213700F740B5 /* XHLaunchAdConfiguration.m in Sources */,
 				EF4B12BA25B175D60055C4D2 /* QYInsetsLabel.swift in Sources */,
 				EF4B121E25B173490055C4D2 /* UIImageExtensions.swift in Sources */,
 				EF4B122625B173F00055C4D2 /* AppDelegate+Vender.swift in Sources */,
 				EF4B129F25B175B80055C4D2 /* QYAlert.swift in Sources */,
+				EFD8C35025C8FDC400F740B5 /* QYReaderInfoController.swift in Sources */,
 				EF4B120E25B173490055C4D2 /* ObservableExtensions.swift in Sources */,
 				EF15E5EB25C2914300DCE201 /* QYRefreshFastHeader.swift in Sources */,
 				EF4B121B25B173490055C4D2 /* DoubleExtensions.swift in Sources */,
 				EF4E3C0625B6AC4C00001B5D /* QYBookShelfController.swift in Sources */,
+				EFD8C41125C9213700F740B5 /* XHLaunchAd.m in Sources */,
 				EFB05D2C25C1728700D4EECA /* QYScreenshotTrackHelper.swift in Sources */,
+				EFD8C35625C8FE6600F740B5 /* QYReaderInfoModel.swift in Sources */,
 				EF15E4C825C2524E00DCE201 /* QYRefreshViewModel.swift in Sources */,
 				EF4B12A425B175C00055C4D2 /* QYButton.swift in Sources */,
 				EF15E5EE25C2915200DCE201 /* QYRefresh.swift in Sources */,
@@ -1077,6 +1162,7 @@
 				EF15E59E25C2606A00DCE201 /* QYBaseEmptyView.swift in Sources */,
 				EF4E3C1225B6B24300001B5D /* QYCurvedTabbarBackgroundView.swift in Sources */,
 				EF4B11DC25B1720C0055C4D2 /* QYTabbarController.swift in Sources */,
+				EFD8C40F25C9213700F740B5 /* XHLaunchImageView.m in Sources */,
 				EFB05CEE25C1689F00D4EECA /* QYKey.swift in Sources */,
 				EF15E5F525C2A04400DCE201 /* QYHomeViewModel.swift in Sources */,
 				EFB2079D25C0F9A000B5C353 /* QYDataBaseManager.swift in Sources */,
@@ -1089,6 +1175,8 @@
 				EF4B125B25B1748D0055C4D2 /* QYFont.swift in Sources */,
 				EF15E5E125C28A6800DCE201 /* QYTableController.swift in Sources */,
 				EF4B121925B173490055C4D2 /* CGSizeExtensions.swift in Sources */,
+				EFD8C40E25C9213700F740B5 /* XHLaunchAdButton.m in Sources */,
+				EFD8C41025C9213700F740B5 /* XHLaunchAdConst.m in Sources */,
 				EFB05CA725C1479600D4EECA /* BundleExtensions.swift in Sources */,
 				EF4B12A925B175C80055C4D2 /* QYHUD.swift in Sources */,
 				EF4B122225B173490055C4D2 /* UIColorExtensions.swift in Sources */,
@@ -1109,21 +1197,25 @@
 				EF0ADAA025BFEED1004F9BFC /* QYReaderStatistical.swift in Sources */,
 				EF4B121225B173490055C4D2 /* UITableView+ReusableView.swift in Sources */,
 				EF4B129625B175A20055C4D2 /* QYNotification.swift in Sources */,
+				EFD0BA2625C7E53700B572EB /* QYCurvedAnimatedTransitioning.swift in Sources */,
 				EF4B121125B173490055C4D2 /* JXPagingListContainerViewExtension.swift in Sources */,
 				EF4B121D25B173490055C4D2 /* UIViewControllerExtensions.swift in Sources */,
 				EF4B121F25B173490055C4D2 /* UIViewExtensions.swift in Sources */,
 				EF4B125925B1748D0055C4D2 /* QYColor.swift in Sources */,
 				EF15E5E425C28EFC00DCE201 /* QYCollectionController.swift in Sources */,
+				EFD8C41225C9213700F740B5 /* XHLaunchAdController.m in Sources */,
 				EF0ADABB25C00A28004F9BFC /* QYReaderBoxController.swift in Sources */,
 				EF4E3BF725B6AABB00001B5D /* QYBaseController.swift in Sources */,
 				EF15E4BB25C2505D00DCE201 /* QYViewModel.swift in Sources */,
-				EFB207D525C132A500B5C353 /* QYReaderApi.swift in Sources */,
+				EFD8C35325C8FDFD00F740B5 /* QYReaderInfoViewModel.swift in Sources */,
 				EF15E5E725C2901700DCE201 /* QYVMTableController.swift in Sources */,
+				EFD8C41625C9213700F740B5 /* XHLaunchAdCache.m in Sources */,
 				EF7EBB9625BECDCC007D0003 /* R.generated.swift in Sources */,
 				EF4E3BF225B6AA9500001B5D /* QYVideoController.swift in Sources */,
 				EF15E5D825C2865900DCE201 /* QYRequest.swift in Sources */,
 				EF15E5DD25C2870A00DCE201 /* QYBaseItem.swift in Sources */,
 				EF4B123925B174370055C4D2 /* ErrorTracker.swift in Sources */,
+				EFD8C41D25C9333500F740B5 /* QYReaderInfoHeaderView.swift in Sources */,
 				EF4B120F25B173490055C4D2 /* MJRefreshComponent+Rx.swift in Sources */,
 				EF4B131625B177050055C4D2 /* EmptyDataSet+Rx.swift in Sources */,
 				EF9B3B9125C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift in Sources */,
@@ -1131,12 +1223,18 @@
 				EF15E5A125C261A500DCE201 /* QYReachabilityHelper.swift in Sources */,
 				EF15E5F125C2945C00DCE201 /* QYVMCollectionController.swift in Sources */,
 				EF4B129A25B175B10055C4D2 /* QYLogger.swift in Sources */,
+				EFD8C41725C9213700F740B5 /* XHLaunchAdImageManager.m in Sources */,
 				EF4B11EB25B172880055C4D2 /* AppDelegate+Internal.swift in Sources */,
+				EFD8C41325C9213700F740B5 /* XHLaunchAdDownloader.m in Sources */,
 				EF4E3C0F25B6B1CA00001B5D /* QYCurvedTabbarItem.swift in Sources */,
+				EFD8C40D25C9213700F740B5 /* XHLaunchAdView.m in Sources */,
 				EFDC25EB25B96756006476C4 /* QYCurvedTabBarItemBadgeView.swift in Sources */,
 				EF4B121025B173490055C4D2 /* MJRefreshFooter+Rx.swift in Sources */,
+				EFD8C42125C9357800F740B5 /* QYReaderInfoChaptersView.swift in Sources */,
+				EFD8C31725C8FBA500F740B5 /* QYReaderApi.swift in Sources */,
 				EFD7931325BE66090093F5FD /* QYIconFontDiary.swift in Sources */,
 				EF4B12A525B175C00055C4D2 /* QYBorderButton.swift in Sources */,
+				EFD8C41425C9213700F740B5 /* XHLaunchAdImageView+XHLaunchAdCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,14 +37,16 @@ target 'Diary' do
   pod 'AttributedString','~> 1.6.8'
   # Tools
   pod 'R.swift', '~> 5.3.0'
-  # launch Ad
-  pod 'XHLaunchAd', '~> 3.9.12'
+  # launch Ad 自定义后台时长
+#  pod 'XHLaunchAd', '~> 3.9.12'
   # alert
   pod 'SwiftEntryKit', '~> 1.2.6'
-  # PageScrollView
-  pod 'GKPageScrollViewSwift', '~> 1.4.2'
+  # page ScrollView 
+  pod 'GKPageSmoothView/Swift', '~> 1.5.3'
   pod 'JXSegmentedView', '~> 1.2.7'
   pod 'JXPagingView/Paging','~> 2.0.13'
+  # 骨架
+  pod 'SkeletonView', '~> 1.12.0'
   # image
   pod 'SDWebImageWebPCoder','~> 0.6.1'
   pod 'SDWebImageFLPlugin', '~> 0.4.0'
@@ -52,6 +54,7 @@ target 'Diary' do
   pod 'EFIconFont', '~> 0.8.1'
   # cache
   pod 'DefaultsKit', '~> 0.2.0'
+  pod 'Hero', '~> 1.5.0'
   # route
   pod 'URLNavigator', '~> 2.3.0'
   # player

@@ -119,8 +119,8 @@ class QYCurvedTabbarItemContentView: UIView, QYCurvedTabBarItemBadgeViewDelegate
     }
     /// 选中
     func selectAnimation(step: Int, animated: Bool, completion: (() -> ())?) {
-        let animatedDuration = QYCurvedAnimationConfig.singleDuration
-        let delayDuration = QYCurvedAnimationConfig.singleDuration * Double(step) - animatedDuration
+        let animatedDuration = QYCurvedAnimationConfig.singleDuration(step)
+        let delayDuration = QYCurvedAnimationConfig.animationDuration(step) - animatedDuration
         UIView.animate(withDuration: animatedDuration, delay: delayDuration, options: []) {
             self.imageView.ext.y = self.imageCenterY + self.centerYOffest
             self.imageView.alpha = 0
@@ -131,8 +131,8 @@ class QYCurvedTabbarItemContentView: UIView, QYCurvedTabBarItemBadgeViewDelegate
     /// 取消选中
     func deselectAnimation(step: Int,animated: Bool, completion: (() -> ())?) {
         completion?()
-        let animatedDuration = QYCurvedAnimationConfig.singleDuration / 2
-        let delayDuration = QYCurvedAnimationConfig.singleDuration / 2
+        let animatedDuration = QYCurvedAnimationConfig.singleDuration(step) / 2
+        let delayDuration = QYCurvedAnimationConfig.singleDuration(step) / 2
         UIView.animate(withDuration: animatedDuration, delay: delayDuration, options: []) {
             self.imageView.alpha = 1
             self.imageView.ext.y = self.imageCenterY
@@ -146,8 +146,9 @@ class QYCurvedTabbarItemContentView: UIView, QYCurvedTabBarItemBadgeViewDelegate
     /// 用于  1 2
     func stepAnimation(step: Int) {
         
-        let animatedDuration = QYCurvedAnimationConfig.singleDuration * 2
-        let delayDuration = QYCurvedAnimationConfig.singleDuration * Double(step + 1) - animatedDuration
+        let animatedDuration = QYCurvedAnimationConfig.singleDuration(step) * 2
+        let delayDuration = QYCurvedAnimationConfig.singleDuration(step) * Double(step + 1) - animatedDuration
+        
         UIView.animateKeyframes(withDuration: animatedDuration, delay: delayDuration, options: []) {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5) {
                 self.imageView.ext.y = self.imageCenterY + self.centerYOffest

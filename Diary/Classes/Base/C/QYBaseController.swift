@@ -46,6 +46,13 @@ class QYBaseController: UIViewController {
     var emptyVerticalOffset: CGFloat = QYInch.navigationHeight
     /// 数据源 nil 时点击了 view
     var emptyDataSetDidTapView: (() -> Void)?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

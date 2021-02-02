@@ -18,6 +18,7 @@ class QYTableController: QYBaseController {
             tableView.estimatedRowHeight = 0
             tableView.estimatedSectionHeaderHeight = 0
             tableView.estimatedSectionFooterHeight = 0
+            tableView.contentInsetAdjustmentBehavior = .never
         }
         tableView.keyboardDismissMode = .onDrag
         tableView.separatorStyle = .none

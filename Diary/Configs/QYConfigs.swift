@@ -14,6 +14,8 @@ typealias LocalString = R.string.localizable
 struct QYConfigs {
     /// 路由
     static let routerSchemes = "qianyuDiary://"
+    /// 小说路由
+    static let readerSchemes = routerSchemes + "reader/"
     static let channel = "pgy"
     private static var _version: String?
     static var version: String {

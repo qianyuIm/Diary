@@ -31,6 +31,7 @@ extension AppDelegate {
         window?.makeKeyAndVisible()
         screenshotTrack()
         alertPrivacyPolicy()
+        displayAd()
     }
     /// 监听截屏
     func screenshotTrack() {
@@ -39,6 +40,10 @@ extension AppDelegate {
     /// 启动隐私协议
     func alertPrivacyPolicy() {
         QYAlert.alertPrivacyPolicy()
+    }
+    /// 启动广告
+    func displayAd() {
+        launchAd.start()
     }
     
 }

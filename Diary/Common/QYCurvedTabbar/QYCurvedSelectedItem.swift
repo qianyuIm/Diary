@@ -27,7 +27,7 @@ class QYCurvedSelectedItem: UIView {
                     to toCenterX: CGFloat,
                     item: QYCurvedTabbarItem,
                     step: Int) {
-        let duration = QYCurvedAnimationConfig.singleDuration * Double(step)
+        let duration = QYCurvedAnimationConfig.animationDuration(step)
         DispatchQueue.main.asyncAfter(deadline: .now() + duration/2) {
             self.iconImageView.image = item.selectedImage
         }

@@ -9,7 +9,9 @@
 import UIKit
 /// 全局错误状态Item
 class QYBaseStatusItem: HandyJSON {
-    var retCode: Int?
+    /// 状态码 为1 忽略
+    var retCode: Int = 1
+    /// 状态信息
     var msg: String?
     var code: String?
     required init() {}

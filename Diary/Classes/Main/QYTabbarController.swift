@@ -31,7 +31,7 @@ class QYTabbarController: QYCurvedTabbarController {
                                  normalIcon: QYIconFontDiaryIcons.tabMine,
                                  selectedIcon: QYIconFontDiaryIcons.tabMine)
         viewControllers = [home, bookShelf, discovery, video, mine]
-        selectedIndex = 0
+        selectedIndex = 1
     }
     func normalImage(_ icon: QYIconFontDiaryIcons) -> UIImage? {
         return icon.image(size: 24, foregroundColor: QYColor.tabbarNormalIconColor)
