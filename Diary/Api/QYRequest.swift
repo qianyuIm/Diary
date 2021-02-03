@@ -52,13 +52,16 @@ let isLocalRequest: Bool = true
 
 extension Moya.TargetType {
     func request() -> Single<Moya.Response> {
-        return apiProvider.rx.request(.target(self))
-//        switch self.path {
-//        case HLJGalleryApiPath.galleryVideoRecommendedPath:
-//            return apiLocalProvider.rx.request(.target(self))
-//        default:
-//            return apiProvider.rx.request(.target(self))
-//        }
+        /// 包装下
+        let target = MultiTarget(self)
+        switch target {
+        // 本地数据
+        case .target(QYReaderApi.readerInfo):
+            return apiLocalProvider.rx.request(target)
+        default:
+            // 网络数据
+            return apiProvider.rx.request(target)
+        }
     }
 }
 

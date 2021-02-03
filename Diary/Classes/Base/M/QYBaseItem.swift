@@ -13,7 +13,7 @@ class QYBaseStatusItem: HandyJSON {
     var retCode: Int = 1
     /// 状态信息
     var msg: String?
-    var code: String?
+    var code: Int = 1
     required init() {}
     func mapping(mapper: HelpingMapper) {
         mapper <<<

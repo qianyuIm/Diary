@@ -47,9 +47,10 @@ class QYBookShelfController: QYBaseController {
         self.navigationController?.pushViewController(box, animated: true)
     }
     @objc func addBarButtonItemDidTap() {
-        let context = QYRouterContext(message: 123) { (obj) in
-            
-        }
-        router.pushURL(QYRouterInternal.readerInfo.path,context: context)
+//        let context = QYRouterContext(message: "578519") { (obj) in
+//            
+//        }
+//        router.pushURL(QYRouterInternal.readerInfo.path,context: context)
+        self.navigationController?.pushViewController(QYReaderInfoController(bookId: "578519"), animated: true)
     }
 }

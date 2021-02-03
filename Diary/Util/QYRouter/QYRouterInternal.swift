@@ -20,11 +20,12 @@ extension QYRouterInternal {
     static func initRouter() {
         router.register(QYRouterInternal.readerInfo.path) { (url, values, context) -> UIViewController? in
             guard let context = context as? QYRouterContext,
-                  let bookId = context.message as? Int else {
+                  let bookId = context.message as? String else {
                 return nil
             }
             let readerInfo = QYReaderInfoController(bookId: bookId)
             return readerInfo
         }
+        
     }
 }

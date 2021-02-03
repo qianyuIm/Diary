@@ -1,0 +1,96 @@
+{
+    "status": 1,
+    "info": "success",
+    "data": {
+        "Id": 578535,
+        "Name": "我的体内有只鬼",
+        "Img": "wodetineiyouzhigui.jpg",
+        "Author": "一柄墨刀",
+        "Desc": "厉鬼复苏，百鬼夜行。无端穿越来到这个世界的江晓置身于魑魅魍魉之中，却发现自己的影子可以无限吞噬鬼物，得到它们的能力。【成功吞噬白雾鬼，获得能力：雾化】【成功吞噬吊死鬼，获得能力：枷锁】【成功吞噬青铜鬼，获得能力：铜皮】【成功吞噬水鬼，获得能力：乱水流】【.......】在所有人对鬼物避之不及时，江晓一人前往各处鬼蜮，百般作死：“我得想个办法，抓个女鬼回去暖床。”[我的体内有只鬼]",
+        "CId": 96,
+        "CName": "武侠仙侠",
+        "LastTime": "2/3/2021 11:09:00 AM",
+        "FirstChapterId": 2965577,
+        "LastChapter": "第1101章 来!跑给我看看!",
+        "LastChapterId": 3393231,
+        "BookStatus": "连载",
+        "SameUserBooks": [{
+            "Id": 420116,
+            "Name": "重生之一代魔主",
+            "Author": "一柄墨刀",
+            "Img": "zhongshengzhiyidaimozhu.jpg",
+            "LastChapterId": 2269231,
+            "LastChapter": "第72章 雷!",
+            "Score": 0.0
+        }],
+        "SameCategoryBooks": [{
+            "Id": 578535,
+            "Name": "我的体内有只鬼",
+            "Img": "wodetineiyouzhigui.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 604390,
+            "Name": "诛仙之焱出青云",
+            "Img": "zhuxianzhiyanchuqingyun.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 461895,
+            "Name": "浑天记",
+            "Img": "huntianji.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 488722,
+            "Name": "洪主",
+            "Img": "hongzhu.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 457871,
+            "Name": "太上执符",
+            "Img": "taishangzhifu.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 433164,
+            "Name": "无垠",
+            "Img": "wuyin.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 157632,
+            "Name": "余楚",
+            "Img": "yuchu.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 161625,
+            "Name": "废柴逆天召唤师",
+            "Img": "feichainitianzhaohuanshi.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 602795,
+            "Name": "雁鸣长空",
+            "Img": "yanmingzhangkong.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 451229,
+            "Name": "我夺舍了始皇",
+            "Img": "woduosheleshihuang.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 616824,
+            "Name": "今古传奇·武侠版第137期",
+            "Img": "jinguchuanqi·wuxiabandi137qi.jpg",
+            "Score": 0.0
+        }, {
+            "Id": 597111,
+            "Name": "叩问仙道",
+            "Img": "kouwenxiandao.jpg",
+            "Score": 0.0
+        }],
+        "BookVote": {
+            "BookId": 578535,
+            "TotalScore": 47,
+            "VoterCount": 7,
+            "Score": 6.7
+        },
+        "UpUser": "173****9792",
+        "Declare": "该作品由 书友173****9792 上传贡献，仅供在线阅读，禁止下载，转载方式传播！"
+    }
+}

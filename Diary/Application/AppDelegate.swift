@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configNavigationBar()
         initializeRouter()
         initializeRoot()
+        let aa: [Int]? = []
+        if let bb = aa {
+            
+            logDebug("123")
+        }
+        
         return true
     }
     //MARK: 3D touch

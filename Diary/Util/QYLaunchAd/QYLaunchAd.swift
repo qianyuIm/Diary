@@ -34,7 +34,7 @@ class QYLaunchAd: NSObject {
         guard let url = url else { return  }
         let adConfig = XHLaunchImageAdConfiguration()
         #if DEBUG
-        adConfig.duration = 2
+        adConfig.duration = 1
         #else
         adConfig.duration = 5
         #endif

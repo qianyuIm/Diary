@@ -84,6 +84,7 @@ PODS:
   - SwiftyBeaver (1.9.3)
   - SwiftyJSON (5.0.0)
   - Toaster (2.3.0)
+  - UIImageColors (2.1.0)
   - UINavigation-SXFixSpace (1.2.4)
   - URLNavigator (2.3.0)
   - ZFPlayer/AVPlayer (4.0.1):
@@ -121,7 +122,7 @@ DEPENDENCIES:
   - RxReachability (~> 1.0.0)
   - SDWebImageFLPlugin (~> 0.4.0)
   - SDWebImageWebPCoder (~> 0.6.1)
-  - SkeletonView
+  - SkeletonView (~> 1.12.0)
   - SnapKit (~> 5.0.1)
   - SwiftEntryKit (~> 1.2.6)
   - SwiftRichString (~> 3.7.2)
@@ -129,6 +130,7 @@ DEPENDENCIES:
   - SwiftyBeaver (~> 1.9.1)
   - SwiftyJSON (~> 5.0.0)
   - Toaster (from `https://github.com/devxoul/Toaster`, commit `aec54fc48d3d36279424103de0784c23862d19df`)
+  - UIImageColors
   - UINavigation-SXFixSpace (~> 1.2.4)
   - URLNavigator (~> 2.3.0)
   - ZFPlayer/AVPlayer (~> 4.0.1)
@@ -183,6 +185,7 @@ SPEC REPOS:
     - SwiftTheme
     - SwiftyBeaver
     - SwiftyJSON
+    - UIImageColors
     - UINavigation-SXFixSpace
     - URLNavigator
     - ZFPlayer
@@ -246,10 +249,11 @@ SPEC CHECKSUMS:
   SwiftyBeaver: 2e8acd6fc90c6d0a27055867a290794926d57c02
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toaster: 33d27524fb6829cdb6b247c924beab0cfa001b3e
+  UIImageColors: d2ef3b0877d203cbb06489eeb78ea8b7788caabe
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: 84db926cfe6436a6b256686b7bd9ab7d9f85519d
+PODFILE CHECKSUM: dcd31175cfbbce1e0a30a501aa45f85aff4f63d8
 
 COCOAPODS: 1.10.0

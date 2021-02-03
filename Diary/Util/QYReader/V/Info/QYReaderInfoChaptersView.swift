@@ -26,9 +26,11 @@ class QYReaderInfoChaptersView: UIView {
             make.edges.equalToSuperview()
         }
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    deinit {
+        logDebug("移除了")
     }
 }
 

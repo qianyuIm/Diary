@@ -77,7 +77,12 @@ extension QYReaderApi: TargetType {
     }
     
     var sampleData: Data {
-        return "".data(using: String.Encoding.utf8)!
+        switch self {
+        case .readerInfo:
+            return QYHelper.localJsonData(with: "readerInfo")
+        default:
+            return QYHelper.localJsonData(with: "")
+        }
     }
     
     var task: Task {

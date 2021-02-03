@@ -1,38 +1,24 @@
 //
-//  QYReaderInfoModel.swift
+//  QYReaderModel.swift
 //  Diary
 //
-//  Created by cyd on 2021/2/2.
+//  Created by cyd on 2021/2/3.
 //  Copyright © 2021 qianyuIm. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import HandyJSON
-class QYReaderInfoModel: HandyJSON {
+
+class QYReaderModel: HandyJSON {
     var book_id: String?
     var Name: String?
-    // woyouyigeshenfenbianjiqi.jpg
     var Img: String?
     var Author: String?
-    var Desc: String?
-    var Cid: Int?
-    var CName: String?
-    var LastTime: String?
-    var FirstChapterId: Int?
     var LastChapter: String?
-    var LastChapterId: Int?
-    var BookStatus: String?
-    var SameUserBooks: [QYReaderModel]?
-    var SameCategoryBooks: [QYReaderModel]?
-    var BookVote: [QYReaderVoteModel]?
-    var book_img: String? {
-        if Img == nil {
-            return Img
-        }
-        return "https://imgapixs.pysmei.com//BookFiles/BookImages/" + Img!
-    }
-    required init() {}
+    var LastChapterId: String?
+    var Score: NSNumber?
     
+    required init() {}
     func mapping(mapper: HelpingMapper) {
         mapper <<<
             self.book_id <-- ("Id", TransformOf<String, Int>(fromJSON: { (rawValue) -> String? in
@@ -48,3 +34,15 @@ class QYReaderInfoModel: HandyJSON {
             }))
     }
 }
+class QYReaderVoteModel: HandyJSON {
+    var book_id: Int?
+    var TotalScore: Int?
+    var VoterCount: Int?
+    var Score: NSNumber?
+    required init() {}
+    func mapping(mapper: HelpingMapper) {
+        mapper <<<
+            self.book_id <-- "Id"
+    }
+}
+

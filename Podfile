@@ -47,6 +47,8 @@ target 'Diary' do
   pod 'JXPagingView/Paging','~> 2.0.13'
   # 骨架
   pod 'SkeletonView', '~> 1.12.0'
+  # 获取主色
+  pod 'UIImageColors'
   # image
   pod 'SDWebImageWebPCoder','~> 0.6.1'
   pod 'SDWebImageFLPlugin', '~> 0.4.0'

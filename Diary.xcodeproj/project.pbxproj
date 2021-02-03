@@ -88,6 +88,14 @@
 		EF4E3C1225B6B24300001B5D /* QYCurvedTabbarBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E3C1125B6B24300001B5D /* QYCurvedTabbarBackgroundView.swift */; };
 		EF4E3C1525B6B29600001B5D /* QYCurvedTabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E3C1425B6B29600001B5D /* QYCurvedTabbarItemContentView.swift */; };
 		EF4E3C1825B6B79700001B5D /* QYCurvedTabbarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E3C1725B6B79700001B5D /* QYCurvedTabbarItemContainer.swift */; };
+		EF6C38C025CA3C4600ABC4A1 /* QYReaderMapJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C38BF25CA3C4600ABC4A1 /* QYReaderMapJson.swift */; };
+		EF6C38C325CA3E1B00ABC4A1 /* QYReaderBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C38C225CA3E1B00ABC4A1 /* QYReaderBaseModel.swift */; };
+		EF6C38C625CA3F1400ABC4A1 /* QYReaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C38C525CA3F1400ABC4A1 /* QYReaderModel.swift */; };
+		EF6C390225CA6D7600ABC4A1 /* QYReaderInfoHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C390125CA6D7600ABC4A1 /* QYReaderInfoHeaderCell.swift */; };
+		EF6C390625CA714F00ABC4A1 /* readerInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = EF6C390525CA714F00ABC4A1 /* readerInfo.json */; };
+		EF6C390925CA71F500ABC4A1 /* QYHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C390825CA71F500ABC4A1 /* QYHelper.swift */; };
+		EF6C391025CA79D600ABC4A1 /* QYInch+Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C390F25CA79D600ABC4A1 /* QYInch+Reader.swift */; };
+		EF6C393E25CAA70500ABC4A1 /* GKDBListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C393C25CAA70500ABC4A1 /* GKDBListView.swift */; };
 		EF7EBB9625BECDCC007D0003 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EBB9525BECDCC007D0003 /* R.generated.swift */; };
 		EF8793B225C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */; };
 		EF9B3B9125C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */; };
@@ -213,6 +221,14 @@
 		EF4E3C1125B6B24300001B5D /* QYCurvedTabbarBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedTabbarBackgroundView.swift; sourceTree = "<group>"; };
 		EF4E3C1425B6B29600001B5D /* QYCurvedTabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedTabbarItemContentView.swift; sourceTree = "<group>"; };
 		EF4E3C1725B6B79700001B5D /* QYCurvedTabbarItemContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYCurvedTabbarItemContainer.swift; sourceTree = "<group>"; };
+		EF6C38BF25CA3C4600ABC4A1 /* QYReaderMapJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderMapJson.swift; sourceTree = "<group>"; };
+		EF6C38C225CA3E1B00ABC4A1 /* QYReaderBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderBaseModel.swift; sourceTree = "<group>"; };
+		EF6C38C525CA3F1400ABC4A1 /* QYReaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderModel.swift; sourceTree = "<group>"; };
+		EF6C390125CA6D7600ABC4A1 /* QYReaderInfoHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderInfoHeaderCell.swift; sourceTree = "<group>"; };
+		EF6C390525CA714F00ABC4A1 /* readerInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = readerInfo.json; sourceTree = "<group>"; };
+		EF6C390825CA71F500ABC4A1 /* QYHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYHelper.swift; sourceTree = "<group>"; };
+		EF6C390F25CA79D600ABC4A1 /* QYInch+Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYInch+Reader.swift"; sourceTree = "<group>"; };
+		EF6C393C25CAA70500ABC4A1 /* GKDBListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKDBListView.swift; sourceTree = "<group>"; };
 		EF7EBB9525BECDCC007D0003 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYColor+PrivacyPolicy.swift"; sourceTree = "<group>"; };
 		EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYAlert+PrivacyPolicy.swift"; sourceTree = "<group>"; };
@@ -825,6 +841,14 @@
 			path = C;
 			sourceTree = "<group>";
 		};
+		EF6C390425CA712400ABC4A1 /* localJson */ = {
+			isa = PBXGroup;
+			children = (
+				EF6C390525CA714F00ABC4A1 /* readerInfo.json */,
+			);
+			path = localJson;
+			sourceTree = "<group>";
+		};
 		EF8793B025C3ABE200AD4090 /* Color */ = {
 			isa = PBXGroup;
 			children = (
@@ -848,6 +872,7 @@
 				EFB05CF425C1711200D4EECA /* QYShortcutItemHelper.swift */,
 				EFB05D2B25C1728700D4EECA /* QYScreenshotTrackHelper.swift */,
 				EF15E5A025C261A500DCE201 /* QYReachabilityHelper.swift */,
+				EF6C390825CA71F500ABC4A1 /* QYHelper.swift */,
 			);
 			path = QYHelper;
 			sourceTree = "<group>";
@@ -865,6 +890,7 @@
 			children = (
 				EF0ADABA25C00A28004F9BFC /* QYReaderBoxController.swift */,
 				EFD8C34F25C8FDC400F740B5 /* QYReaderInfoController.swift */,
+				EF6C393C25CAA70500ABC4A1 /* GKDBListView.swift */,
 			);
 			path = reader;
 			sourceTree = "<group>";
@@ -881,6 +907,8 @@
 			isa = PBXGroup;
 			children = (
 				EFD8C31625C8FBA500F740B5 /* QYReaderApi.swift */,
+				EF6C38BF25CA3C4600ABC4A1 /* QYReaderMapJson.swift */,
+				EF6C390425CA712400ABC4A1 /* localJson */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -897,7 +925,9 @@
 		EFB207D825C133B400B5C353 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				EF6C38C225CA3E1B00ABC4A1 /* QYReaderBaseModel.swift */,
 				EFD8C35525C8FE6600F740B5 /* QYReaderInfoModel.swift */,
+				EF6C38C525CA3F1400ABC4A1 /* QYReaderModel.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -915,6 +945,7 @@
 			children = (
 				EFB207DC25C1350500B5C353 /* QYReaderConfig.swift */,
 				EFB207DF25C1366100B5C353 /* QYReaderConfig+ReaderTheme.swift */,
+				EF6C390F25CA79D600ABC4A1 /* QYInch+Reader.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -962,6 +993,7 @@
 			children = (
 				EFD8C41C25C9333500F740B5 /* QYReaderInfoHeaderView.swift */,
 				EFD8C42025C9357800F740B5 /* QYReaderInfoChaptersView.swift */,
+				EF6C390125CA6D7600ABC4A1 /* QYReaderInfoHeaderCell.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -1031,6 +1063,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6C390625CA714F00ABC4A1 /* readerInfo.json in Resources */,
 				EF0ADA9B25BFC332004F9BFC /* iconfont.ttf in Resources */,
 				EF4B10FA25B148450055C4D2 /* LaunchScreen.storyboard in Resources */,
 				EF4B132025B1782B0055C4D2 /* Localizable.strings in Resources */,
@@ -1127,6 +1160,7 @@
 			files = (
 				EF8793B225C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift in Sources */,
 				EF4B125725B1748D0055C4D2 /* QYHeaders.swift in Sources */,
+				EF6C38C025CA3C4600ABC4A1 /* QYReaderMapJson.swift in Sources */,
 				EF4E3C1525B6B29600001B5D /* QYCurvedTabbarItemContentView.swift in Sources */,
 				EF4B121525B173490055C4D2 /* QianyuWrapper.swift in Sources */,
 				EF4E3BE025B67CBD00001B5D /* QYCurvedTabbar.swift in Sources */,
@@ -1147,10 +1181,12 @@
 				EFB05D2C25C1728700D4EECA /* QYScreenshotTrackHelper.swift in Sources */,
 				EFD8C35625C8FE6600F740B5 /* QYReaderInfoModel.swift in Sources */,
 				EF15E4C825C2524E00DCE201 /* QYRefreshViewModel.swift in Sources */,
+				EF6C38C625CA3F1400ABC4A1 /* QYReaderModel.swift in Sources */,
 				EF4B12A425B175C00055C4D2 /* QYButton.swift in Sources */,
 				EF15E5EE25C2915200DCE201 /* QYRefresh.swift in Sources */,
 				EF4B121C25B173490055C4D2 /* CALayerExetnsions.swift in Sources */,
 				EFB05CF125C168F500D4EECA /* QYRouterHelp.swift in Sources */,
+				EF6C38C325CA3E1B00ABC4A1 /* QYReaderBaseModel.swift in Sources */,
 				EF4B122025B173490055C4D2 /* UIButtonExtensions.swift in Sources */,
 				EF4B11E525B1723D0055C4D2 /* QYHomeController.swift in Sources */,
 				EF4B120C25B173490055C4D2 /* ZFPlayer+Rx.swift in Sources */,
@@ -1207,8 +1243,10 @@
 				EF0ADABB25C00A28004F9BFC /* QYReaderBoxController.swift in Sources */,
 				EF4E3BF725B6AABB00001B5D /* QYBaseController.swift in Sources */,
 				EF15E4BB25C2505D00DCE201 /* QYViewModel.swift in Sources */,
+				EF6C390225CA6D7600ABC4A1 /* QYReaderInfoHeaderCell.swift in Sources */,
 				EFD8C35325C8FDFD00F740B5 /* QYReaderInfoViewModel.swift in Sources */,
 				EF15E5E725C2901700DCE201 /* QYVMTableController.swift in Sources */,
+				EF6C391025CA79D600ABC4A1 /* QYInch+Reader.swift in Sources */,
 				EFD8C41625C9213700F740B5 /* XHLaunchAdCache.m in Sources */,
 				EF7EBB9625BECDCC007D0003 /* R.generated.swift in Sources */,
 				EF4E3BF225B6AA9500001B5D /* QYVideoController.swift in Sources */,
@@ -1229,6 +1267,8 @@
 				EF4E3C0F25B6B1CA00001B5D /* QYCurvedTabbarItem.swift in Sources */,
 				EFD8C40D25C9213700F740B5 /* XHLaunchAdView.m in Sources */,
 				EFDC25EB25B96756006476C4 /* QYCurvedTabBarItemBadgeView.swift in Sources */,
+				EF6C393E25CAA70500ABC4A1 /* GKDBListView.swift in Sources */,
+				EF6C390925CA71F500ABC4A1 /* QYHelper.swift in Sources */,
 				EF4B121025B173490055C4D2 /* MJRefreshFooter+Rx.swift in Sources */,
 				EFD8C42125C9357800F740B5 /* QYReaderInfoChaptersView.swift in Sources */,
 				EFD8C31725C8FBA500F740B5 /* QYReaderApi.swift in Sources */,
