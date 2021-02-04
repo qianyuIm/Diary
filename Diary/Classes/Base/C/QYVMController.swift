@@ -25,11 +25,11 @@ class QYVMController<VM: QYViewModel>: QYBaseController {
     
     /// 绑定ViewModel
     func bindViewModel() {
-//        viewModel.loadingIndicator
-//            .drive(rx.isLoading)
-//            .disposed(by: rx.disposeBag)
-//        viewModel.error
-//            .drive(rx.showError)
-//            .disposed(by: rx.disposeBag)
+        viewModel.loadingIndicator.skip(1)
+            .drive(rx.isLoading)
+            .disposed(by: rx.disposeBag)
+        viewModel.error
+            .drive(rx.showError)
+            .disposed(by: rx.disposeBag)
     }
 }

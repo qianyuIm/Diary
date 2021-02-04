@@ -7,80 +7,110 @@
 //
 
 import UIKit
-class QYReaderInfoHeaderHeaderCell: UITableViewCell {
-    static let reuseIdentifier = "ReaderInfoHeaderHeaderCell"
+import SkeletonView
+
+class QYReaderInfoHeaderSameUserCell: UITableViewCell {
+    static let reuseIdentifier = "ReaderInfoHeaderSameUserCell"
     lazy var coverImageView: UIImageView = {
         let imageV = UIImageView()
+        imageV.isSkeletonable = true
         return imageV
     }()
-    lazy var bookName: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-    var item: QYReaderInfoModel? {
+    var item: QYReaderModel? {
         didSet {
             coverImageView.ext.setImage(with: item?.book_img?.ext.url)
         }
     }
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        isSkeletonable = true
         contentView.addSubview(coverImageView)
         coverImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(QYInch.infoHeaderCoverImageTop)
-            make.left.equalTo(QYInch.infoLeftRight)
-            make.width.equalTo(QYInch.infoHeaderCoverImageWidth)
-            make.height.equalTo(QYInch.infoHeaderCoverImageHeight)
-            make.bottom.equalTo(-QYInch.infoHeaderCoverImageBottom)
+            make.centerY.equalToSuperview()
+            make.width.equalTo(QYInch.infoHeaderSameUserCollectionCoverImageHeight)
+            make.height.equalTo(QYInch.infoHeaderSameUserCollectionCoverImageWidth)
+            
         }
     }
-    func cellHeight() -> CGFloat {
-        return 0
-    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
-class QYReaderInfoHeaderIntroCell: UITableViewCell {
-    static let reuseIdentifier = "ReaderInfoHeaderIntroCell"
-    lazy var introLabel: UILabel = {
-        let label = UILabel()
-        return label
+
+class QYReaderInfoHeaderSameCategoryCollectionCell: UICollectionViewCell {
+    lazy var coverImageView: UIImageView = {
+        let imageV = UIImageView()
+        imageV.isSkeletonable = true
+        return imageV
     }()
+    var item: QYReaderModel? {
+        didSet {
+            coverImageView.ext.setImage(with: item?.book_img?.ext.url)
+        }
+    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        isSkeletonable = true
+        contentView.addSubview(coverImageView)
+        coverImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(QYInch.infoHeaderSameUserCollectionCoverImageTop)
+            make.width.equalTo(QYInch.infoHeaderSameUserCollectionCoverImageHeight)
+            make.height.equalTo(QYInch.infoHeaderSameUserCollectionCoverImageWidth)
+            make.bottom.equalTo(-QYInch.infoHeaderSameUserCollectionCoverImageBottom)
+        }
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+class QYReaderInfoHeaderSameCategoryCell: UITableViewCell, UICollectionViewDataSource {
+    static let reuseIdentifier = "ReaderInfoHeaderSameCategoryCell"
+    lazy var layout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.itemSize = CGSize(width: QYInch.screenWidth, height: QYInch.infoHeaderSameUserCollectionCoverImageTop + QYInch.infoHeaderSameUserCollectionCoverImageHeight + QYInch.infoHeaderSameUserCollectionCoverImageBottom)
+        return layout
+    }()
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.isSkeletonable = true
+        collectionView.backgroundColor = QYColor.backgroundColor
+        if #available(iOS 11.0, *) {
+            collectionView.contentInsetAdjustmentBehavior = .never
+        }
+        collectionView.ext.register(QYReaderInfoHeaderSameCategoryCollectionCell.self)
+        collectionView.dataSource = self
+        return collectionView
+    }()
+    var items: [QYReaderModel]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(introLabel)
-        introLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(QYInch.infoLeftRight)
-            make.right.equalTo(-QYInch.infoLeftRight)
-            make.top.equalTo(QYInch.infoHeaderIntroTop)
-            make.bottom.equalTo(-QYInch.infoHeaderIntroBottom)
+        isSkeletonable = true
+        contentView.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
         }
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-class QYReaderInfoHeaderSameUserCell: UITableViewCell {
-    static let reuseIdentifier = "ReaderInfoHeaderSameUserCell"
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return items?.count ?? 0
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-class QYReaderInfoHeaderSameCategoryCell: UITableViewCell {
-    static let reuseIdentifier = "ReaderInfoHeaderSameCategoryCell"
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: QYReaderInfoHeaderSameCategoryCollectionCell = collectionView.ext.dequeueReusableCell(for: indexPath)
+        if let item = items?[indexPath.row] {
+            cell.item = item
+        }
+        return cell
     }
 }

@@ -95,7 +95,6 @@
 		EF6C390625CA714F00ABC4A1 /* readerInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = EF6C390525CA714F00ABC4A1 /* readerInfo.json */; };
 		EF6C390925CA71F500ABC4A1 /* QYHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C390825CA71F500ABC4A1 /* QYHelper.swift */; };
 		EF6C391025CA79D600ABC4A1 /* QYInch+Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C390F25CA79D600ABC4A1 /* QYInch+Reader.swift */; };
-		EF6C393E25CAA70500ABC4A1 /* GKDBListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C393C25CAA70500ABC4A1 /* GKDBListView.swift */; };
 		EF7EBB9625BECDCC007D0003 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EBB9525BECDCC007D0003 /* R.generated.swift */; };
 		EF8793B225C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */; };
 		EF9B3B9125C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */; };
@@ -228,7 +227,6 @@
 		EF6C390525CA714F00ABC4A1 /* readerInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = readerInfo.json; sourceTree = "<group>"; };
 		EF6C390825CA71F500ABC4A1 /* QYHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYHelper.swift; sourceTree = "<group>"; };
 		EF6C390F25CA79D600ABC4A1 /* QYInch+Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYInch+Reader.swift"; sourceTree = "<group>"; };
-		EF6C393C25CAA70500ABC4A1 /* GKDBListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKDBListView.swift; sourceTree = "<group>"; };
 		EF7EBB9525BECDCC007D0003 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYColor+PrivacyPolicy.swift"; sourceTree = "<group>"; };
 		EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYAlert+PrivacyPolicy.swift"; sourceTree = "<group>"; };
@@ -890,7 +888,6 @@
 			children = (
 				EF0ADABA25C00A28004F9BFC /* QYReaderBoxController.swift */,
 				EFD8C34F25C8FDC400F740B5 /* QYReaderInfoController.swift */,
-				EF6C393C25CAA70500ABC4A1 /* GKDBListView.swift */,
 			);
 			path = reader;
 			sourceTree = "<group>";
@@ -1267,7 +1264,6 @@
 				EF4E3C0F25B6B1CA00001B5D /* QYCurvedTabbarItem.swift in Sources */,
 				EFD8C40D25C9213700F740B5 /* XHLaunchAdView.m in Sources */,
 				EFDC25EB25B96756006476C4 /* QYCurvedTabBarItemBadgeView.swift in Sources */,
-				EF6C393E25CAA70500ABC4A1 /* GKDBListView.swift in Sources */,
 				EF6C390925CA71F500ABC4A1 /* QYHelper.swift in Sources */,
 				EF4B121025B173490055C4D2 /* MJRefreshFooter+Rx.swift in Sources */,
 				EFD8C42125C9357800F740B5 /* QYReaderInfoChaptersView.swift in Sources */,

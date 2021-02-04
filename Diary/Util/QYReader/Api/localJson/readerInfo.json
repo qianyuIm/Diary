@@ -2,95 +2,215 @@
     "status": 1,
     "info": "success",
     "data": {
-        "Id": 578535,
-        "Name": "我的体内有只鬼",
-        "Img": "wodetineiyouzhigui.jpg",
-        "Author": "一柄墨刀",
-        "Desc": "厉鬼复苏，百鬼夜行。无端穿越来到这个世界的江晓置身于魑魅魍魉之中，却发现自己的影子可以无限吞噬鬼物，得到它们的能力。【成功吞噬白雾鬼，获得能力：雾化】【成功吞噬吊死鬼，获得能力：枷锁】【成功吞噬青铜鬼，获得能力：铜皮】【成功吞噬水鬼，获得能力：乱水流】【.......】在所有人对鬼物避之不及时，江晓一人前往各处鬼蜮，百般作死：“我得想个办法，抓个女鬼回去暖床。”[我的体内有只鬼]",
-        "CId": 96,
-        "CName": "武侠仙侠",
-        "LastTime": "2/3/2021 11:09:00 AM",
-        "FirstChapterId": 2965577,
-        "LastChapter": "第1101章 来!跑给我看看!",
-        "LastChapterId": 3393231,
-        "BookStatus": "连载",
+        "Id": 617503,
+        "Name": "赖猫的狮子倒影",
+        "Img": "laimaodeshizidaoying.jpg",
+        "Author": "傲无常",
+        "Desc": "《赖猫的狮子倒影》是由祝东宁执导，朱亚文、杨子姗、贺军翔、李媛主演的都市情感电视剧。该剧根据作家傲无常的小说《老婆爱上我》改编，讲述了女总裁慕晚晴与“无业游民”刘青这对欢喜冤家先婚后爱的故事。",
+        "CId": 31,
+        "CName": "都市言情",
+        "LastTime": "1/20/2021 12:12:24 AM",
+        "FirstChapterId": 3491896,
+        "LastChapter": "老傲都市类新作: 花都十二钗 求支持",
+        "LastChapterId": 3492404,
+        "BookStatus": "完结",
         "SameUserBooks": [{
-            "Id": 420116,
-            "Name": "重生之一代魔主",
-            "Author": "一柄墨刀",
-            "Img": "zhongshengzhiyidaimozhu.jpg",
-            "LastChapterId": 2269231,
-            "LastChapter": "第72章 雷!",
+            "Id": 603426,
+            "Name": "保护我方族长",
+            "Author": "傲无常",
+            "Img": "baohuwofangzuzhang.jpg",
+            "LastChapterId": 4485324,
+            "LastChapter": "第七十一章 家族强盛的根基",
+            "Score": 0.0
+        }, {
+            "Id": 214979,
+            "Name": "国产英雄",
+            "Author": "傲无常",
+            "Img": "guochanyingxiong.jpg",
+            "LastChapterId": 1581283,
+            "LastChapter": "保护我方族长—新书发布",
+            "Score": 0.0
+        }, {
+            "Id": 2041,
+            "Name": "花都十二钗",
+            "Author": "傲无常",
+            "Img": "huadoushierchai.jpg",
+            "LastChapterId": 1224204,
+            "LastChapter": "新书《惟我神尊》正式上线,请大家多多支持",
+            "Score": 0.0
+        }, {
+            "Id": 3174,
+            "Name": "昏君",
+            "Author": "傲无常",
+            "Img": "hunjun.jpg",
+            "LastChapterId": 5221073,
+            "LastChapter": "保护我方族长—新书发布多多支持",
+            "Score": 0.0
+        }, {
+            "Id": 2427,
+            "Name": "老婆爱上我",
+            "Author": "傲无常",
+            "Img": "laopoaishangwo.jpg",
+            "LastChapterId": 4612899,
+            "LastChapter": "老傲都市类新作: 花都十二钗 求支持",
+            "Score": 0.0
+        }, {
+            "Id": 186,
+            "Name": "龙舞九天",
+            "Author": "傲无常",
+            "Img": "186.jpg",
+            "LastChapterId": 161006,
+            "LastChapter": "第三百六十三章 大结局+感言",
+            "Score": 0.0
+        }, {
+            "Id": 28252,
+            "Name": "命运编辑器",
+            "Author": "傲无常",
+            "Img": "mingyunbianjiqi.jpg",
+            "LastChapterId": 1557959,
+            "LastChapter": "尝试,勿入",
+            "Score": 0.0
+        }, {
+            "Id": 40691,
+            "Name": "女娲界",
+            "Author": "傲无常",
+            "Img": "nvwajie.jpg",
+            "LastChapterId": 2171212,
+            "LastChapter": "第九十八章",
+            "Score": 0.0
+        }, {
+            "Id": 442702,
+            "Name": "神级文明",
+            "Author": "傲无常",
+            "Img": "shenjiwenming.jpg",
+            "LastChapterId": 2342319,
+            "LastChapter": "第六百零九章 拜见弩雅大长老",
+            "Score": 0.0
+        }, {
+            "Id": 130,
+            "Name": "惟我神尊",
+            "Author": "傲无常",
+            "Img": "130.jpg",
+            "LastChapterId": 3741113,
+            "LastChapter": "大结局+后记",
+            "Score": 0.0
+        }, {
+            "Id": 34469,
+            "Name": "我的邻居是女妖",
+            "Author": "傲无常",
+            "Img": "wodelinjushinvyao.jpg",
+            "LastChapterId": 2307114,
+            "LastChapter": "第一千八百七十二章 这不是家",
+            "Score": 0.0
+        }, {
+            "Id": 416309,
+            "Name": "我是光明神",
+            "Author": "傲无常",
+            "Img": "woshiguangmingshen.jpg",
+            "LastChapterId": 2322172,
+            "LastChapter": "第六百零九章 拜见弩雅大长老",
+            "Score": 0.0
+        }, {
+            "Id": 29773,
+            "Name": "无良皇帝",
+            "Author": "傲无常",
+            "Img": "wulianghuangdi.jpg",
+            "LastChapterId": 1918637,
+            "LastChapter": "大结局",
+            "Score": 0.0
+        }, {
+            "Id": 21721,
+            "Name": "星际仙途",
+            "Author": "傲无常",
+            "Img": "xingjixiantu.jpg",
+            "LastChapterId": 1408704,
+            "LastChapter": "第九十二章 结局",
+            "Score": 0.0
+        }, {
+            "Id": 29692,
+            "Name": "浴火焚神",
+            "Author": "傲无常",
+            "Img": "yuhuofenshen.jpg",
+            "LastChapterId": 1894012,
+            "LastChapter": "最终章 结局",
+            "Score": 0.0
+        }, {
+            "Id": 611386,
+            "Name": "欲火焚神",
+            "Author": "傲无常",
+            "Img": "yuhuofenshen.jpg",
+            "LastChapterId": 3246604,
+            "LastChapter": "最终章 结局",
             "Score": 0.0
         }],
         "SameCategoryBooks": [{
-            "Id": 578535,
-            "Name": "我的体内有只鬼",
-            "Img": "wodetineiyouzhigui.jpg",
+            "Id": 571073,
+            "Name": "第五浩劫",
+            "Img": "diwuhaojie.jpg",
             "Score": 0.0
         }, {
-            "Id": 604390,
-            "Name": "诛仙之焱出青云",
-            "Img": "zhuxianzhiyanchuqingyun.jpg",
+            "Id": 589523,
+            "Name": "盖世战神",
+            "Img": "gaishizhanshen.jpg",
             "Score": 0.0
         }, {
-            "Id": 461895,
-            "Name": "浑天记",
-            "Img": "huntianji.jpg",
+            "Id": 602355,
+            "Name": "神医叶无道宋雨涵",
+            "Img": "shenyiyewudaosongyuhan.jpg",
             "Score": 0.0
         }, {
-            "Id": 488722,
-            "Name": "洪主",
-            "Img": "hongzhu.jpg",
+            "Id": 602881,
+            "Name": "宁沉央韩飞雪",
+            "Img": "ningchenyanghanfeixue.jpg",
             "Score": 0.0
         }, {
-            "Id": 457871,
-            "Name": "太上执符",
-            "Img": "taishangzhifu.jpg",
+            "Id": 603056,
+            "Name": "龙王霸婿",
+            "Img": "longwangbaxu.jpg",
             "Score": 0.0
         }, {
-            "Id": 433164,
-            "Name": "无垠",
-            "Img": "wuyin.jpg",
+            "Id": 462379,
+            "Name": "幻城浮屠",
+            "Img": "huanchengfutu.jpg",
             "Score": 0.0
         }, {
-            "Id": 157632,
-            "Name": "余楚",
-            "Img": "yuchu.jpg",
+            "Id": 602898,
+            "Name": "陈汉升萧容鱼",
+            "Img": "chenhanshengxiaorongyu.jpg",
             "Score": 0.0
         }, {
-            "Id": 161625,
-            "Name": "废柴逆天召唤师",
-            "Img": "feichainitianzhaohuanshi.jpg",
+            "Id": 616806,
+            "Name": "天王神婿",
+            "Img": "tianwangshenxu.jpg",
             "Score": 0.0
         }, {
-            "Id": 602795,
-            "Name": "雁鸣长空",
-            "Img": "yanmingzhangkong.jpg",
+            "Id": 191368,
+            "Name": "动力之王",
+            "Img": "donglizhiwang.jpg",
             "Score": 0.0
         }, {
-            "Id": 451229,
-            "Name": "我夺舍了始皇",
-            "Img": "woduosheleshihuang.jpg",
+            "Id": 393990,
+            "Name": "爱若累了",
+            "Img": "airuoleile.jpg",
             "Score": 0.0
         }, {
-            "Id": 616824,
-            "Name": "今古传奇·武侠版第137期",
-            "Img": "jinguchuanqi·wuxiabandi137qi.jpg",
+            "Id": 483137,
+            "Name": "至尊狂龙",
+            "Img": "zhizunkuanglong.jpg",
             "Score": 0.0
         }, {
-            "Id": 597111,
-            "Name": "叩问仙道",
-            "Img": "kouwenxiandao.jpg",
+            "Id": 614775,
+            "Name": "重生九零我绑定了搞钱系统",
+            "Img": "zhongshengjiulingwobangdinglegaoqianxitong.jpg",
             "Score": 0.0
         }],
         "BookVote": {
-            "BookId": 578535,
-            "TotalScore": 47,
-            "VoterCount": 7,
-            "Score": 6.7
+            "BookId": 617503,
+            "TotalScore": 6,
+            "VoterCount": 1,
+            "Score": 6.0
         },
-        "UpUser": "173****9792",
-        "Declare": "该作品由 书友173****9792 上传贡献，仅供在线阅读，禁止下载，转载方式传播！"
+        "UpUser": "185****6132",
+        "Declare": "该作品由 书友185****6132 上传贡献，仅供在线阅读，禁止下载，转载方式传播！"
     }
 }

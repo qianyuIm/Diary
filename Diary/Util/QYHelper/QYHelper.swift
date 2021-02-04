@@ -18,4 +18,12 @@ class QYHelper {
         let data = try? Data(contentsOf: jsonUrl)
         return data ?? "".data(using: String.Encoding.utf8)!
     }
+    
+    /// 主线程异步执行
+    /// - Parameter completion:
+    class func mainAsync(completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            completion()
+        }
+    }
 }

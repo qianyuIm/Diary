@@ -17,7 +17,12 @@ class QYReaderModel: HandyJSON {
     var LastChapter: String?
     var LastChapterId: String?
     var Score: NSNumber?
-    
+    var book_img: String? {
+        if Img == nil {
+            return Img
+        }
+        return "https://imgapixs.pysmei.com//BookFiles/BookImages/" + Img!
+    }
     required init() {}
     func mapping(mapper: HelpingMapper) {
         mapper <<<
