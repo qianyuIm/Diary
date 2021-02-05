@@ -12,7 +12,6 @@ extension QYInch {
     static let infoLeft = value(12)
     /// 详情右
     static let infoRight = value(12)
-    
     /// 小说详情 header
     struct readerInfoHeader {
         /// 距离顶部高度
@@ -28,8 +27,25 @@ extension QYInch {
         /// 整体高度 40 为预留label高度
         static let height = top + coverImageHeight + coverImageBottom + bottom
     }
+    /// 相同作者
+    struct readerInfoUser {
+        static let top = QYInch.value(15)
+        /// 封面高度
+        static let coverImageHeight = QYInch.value(100)
+        /// 封面宽度
+        static let coverImageWidth = QYInch.value(80)
+        static let bottom = QYInch.value(15)
+        static let height = top + coverImageHeight + bottom
+
+    }
+    /// 相同类型
     struct readerInfoCategory {
-        
+        static let top = QYInch.value(12)
+        /// 封面高度
+        static let coverImageHeight = QYInch.value(100)
+        /// 封面宽度
+        static let coverImageWidth = QYInch.value(80)
+        static let itemSize = CGSize(width: (QYInch.screenWidth / 3).ext.floor, height: top + coverImageHeight + QYInch.value(30))
     }
 }
 extension QYInch {

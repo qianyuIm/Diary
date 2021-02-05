@@ -18,17 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configNavigationBar()
         initializeRouter()
         initializeRoot()
-        let aa: [Int]? = []
-        if let bb = aa {
-            
-            logDebug("123")
+        for index in 0..<100 {
+            let row = getRows(index)
+            logDebug("count = \(index), row = \(row)")
         }
-        
         return true
     }
     //MARK: 3D touch
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         completionHandler(handleShortcutItem(shortcutItem))
+    }
+    func getRows(_ count: Int) -> Int {
+        if count == 0 {
+            return 0
+        }
+        return (count - 1) / 3 + 1
     }
 }
 

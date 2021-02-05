@@ -24,7 +24,7 @@ class QYReaderInfoModel: HandyJSON {
     var BookStatus: String?
     var SameUserBooks: [QYReaderModel]?
     var SameCategoryBooks: [QYReaderModel]?
-    var BookVote: [QYReaderVoteModel]?
+    var BookVote: QYReaderVoteModel?
     var book_img: String? {
         if Img == nil {
             return Img

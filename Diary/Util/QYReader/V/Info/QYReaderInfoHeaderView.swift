@@ -8,6 +8,9 @@
 
 import UIKit
 import SkeletonView
+import UIImageColors
+import Cosmos
+
 class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
     static let reuseIdentifier = "ReaderInfoTableHeaderView"
     lazy var coverImageView: UIImageView = {
@@ -16,21 +19,74 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
         imageV.isSkeletonable = true
         return imageV
     }()
+    lazy var labelContentview: UIView = {
+        let view = UIView()
+        view.isSkeletonable = true
+        return view
+    }()
+    lazy var nameLabel: UILabel = {
+        let label = UILabel()
+        label.isSkeletonable = true
+        label.font = QYFont.fontMedium(15)
+        label.textColor = QYColor.infoTitleColor
+        label.textAlignment = .left
+        return label
+    }()
+    lazy var authorLabel: UILabel = {
+        let label = UILabel()
+        label.isSkeletonable = true
+        label.font = QYFont.fontRegular(13)
+        label.textAlignment = .left
+        label.textColor = QYColor.infoDescribeColor
+        return label
+    }()
+    lazy var cNameLabel: UILabel = {
+        let label = UILabel()
+        label.isSkeletonable = true
+        label.font = QYFont.fontRegular(13)
+        label.textAlignment = .left
+        label.textColor = QYColor.infoDescribeColor
+        return label
+    }()
+    lazy var statusLabel: UILabel = {
+        let label = UILabel()
+        label.isSkeletonable = true
+        label.font = QYFont.fontRegular(13)
+        label.textAlignment = .left
+        label.textColor = QYColor.infoDescribeColor
+        return label
+    }()
+    lazy var starRatingView: CosmosView = {
+        var settings = CosmosSettings.default
+        settings.fillMode = .precise
+        settings.textColor = QYColor.infoDescribeColor
+        let view = CosmosView(settings: settings)
+        view.rating = 0
+        view.isSkeletonable = true
+        return view
+    }()
     lazy var introLabel: UILabel = {
         let label = UILabel()
         label.isSkeletonable = true
         label.numberOfLines = 0
         label.font = QYFont.fontRegular(15)
         label.skeletonCornerRadius = 5
-        /// 骨架展示3行
-        label.text = "\n\n"
+        label.textColor = QYColor.infoDescribeColor
         return label
     }()
+    var updateColors: ((_ colors: UIImageColors) -> Void)?
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = QYColor.backgroundColor
         isSkeletonable = true
         contentView.addSubview(coverImageView)
+        contentView.addSubview(labelContentview)
+        labelContentview.addSubview(nameLabel)
+        labelContentview.addSubview(authorLabel)
+        labelContentview.addSubview(cNameLabel)
+        labelContentview.addSubview(statusLabel)
+        labelContentview.addSubview(starRatingView)
+
         contentView.addSubview(introLabel)
         coverImageView.snp.makeConstraints { (make) in
             make.left.equalTo(QYInch.infoLeft)
@@ -38,10 +94,49 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
             make.width.equalTo(QYInch.readerInfoHeader.coverImageWidth)
             make.height.equalTo(QYInch.readerInfoHeader.coverImageHeight).priority(.high)
         }
+        // fixbug: .priority(.high)
+        labelContentview.snp.makeConstraints { (make) in
+            make.left.equalTo(coverImageView.snp.right)
+                .offset(QYInch.value(10))
+            make.centerY.equalTo(coverImageView)
+            make.right.equalTo(-QYInch.infoRight).priority(.high)
+        }
+        let labelTempHeight = QYInch.value(12)
+        nameLabel.snp.makeConstraints { (make) in
+            make.left.top.right.equalToSuperview()
+            make.height.greaterThanOrEqualTo(labelTempHeight)
+        }
+        authorLabel.snp.makeConstraints { (make) in
+            make.left.right.equalTo(nameLabel)
+            make.top.equalTo(nameLabel.snp.bottom)
+                .offset(QYInch.value(4))
+            make.height.greaterThanOrEqualTo(labelTempHeight)
+        }
+        cNameLabel.snp.makeConstraints { (make) in
+            make.left.right.equalTo(nameLabel)
+            make.top.equalTo(authorLabel.snp.bottom)
+                .offset(QYInch.value(4))
+            make.height.greaterThanOrEqualTo(labelTempHeight)
+        }
+        statusLabel.snp.makeConstraints { (make) in
+            make.left.right.equalTo(nameLabel)
+            make.top.equalTo(cNameLabel.snp.bottom)
+                .offset(QYInch.value(4))
+            make.height.greaterThanOrEqualTo(labelTempHeight)
+        }
+        starRatingView.snp.makeConstraints { (make) in
+            make.left.right.equalTo(nameLabel)
+            make.top.equalTo(statusLabel.snp.bottom)
+                .offset(QYInch.value(4))
+            make.height.equalTo(QYInch.value(20))
+            make.bottom.equalToSuperview()
+        }
         introLabel.snp.makeConstraints { (make) in
             make.left.equalTo(coverImageView)
-            make.right.equalTo(-QYInch.infoRight)
-            make.top.equalTo(coverImageView.snp.bottom).offset(QYInch.readerInfoHeader.coverImageBottom)
+            make.right.equalTo(-QYInch.infoRight).priority(.high)
+            make.height.greaterThanOrEqualTo(QYInch.value(40))
+            make.top.equalTo(coverImageView.snp.bottom)
+                .offset(QYInch.readerInfoHeader.coverImageBottom)
             make.bottom.equalTo(-QYInch.readerInfoHeader.bottom)
         }
     }
@@ -50,20 +145,29 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     func config(headerItem: QYReaderInfoModel?) {
-        coverImageView.ext.setImage(with: headerItem?.book_img?.ext.url)
+        coverImageView.ext.setImage(with: headerItem?.book_img?.ext.url) { [weak self](image, error, cacheType, imageUrl) in
+            if let image = image {
+                guard let colors = image.getColors(quality: .low) else { return }
+                self?.contentView.backgroundColor = colors.primary
+                
+                self?.updateColors?(colors)
+            }
+        }
+        nameLabel.text = headerItem?.Name
+        authorLabel.text = (headerItem?.Author != nil) ? "作者: \((headerItem?.Author)!)" : ""
+        cNameLabel.text = (headerItem?.CName != nil) ? "类型: \((headerItem?.CName)!)" : ""
+        statusLabel.text = (headerItem?.BookStatus != nil) ? "状态: \((headerItem?.BookStatus)!)" : ""
         introLabel.text = headerItem?.Desc
+        starRatingView.rating = (headerItem?.BookVote?.Score?.doubleValue ?? 0) / 2
+        starRatingView.text = (headerItem?.BookVote?.Score?.stringValue ?? "0")  + " 分"
     }
     
 }
 class QYReaderInfoHeaderView: UIView {
-    lazy var tableHeaderView: QYReaderInfoTableHeaderView = {
-        let view = QYReaderInfoTableHeaderView(frame: CGRect(x: 0, y: 0, width: QYInch.screenWidth, height: QYInch.readerInfoHeader.height))
-        return view
-    }()
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.isSkeletonable = true
-        
+        tableView.backgroundColor = .clear
         tableView.register(QYReaderInfoHeaderSameUserCell.self, forCellReuseIdentifier: QYReaderInfoHeaderSameUserCell.reuseIdentifier)
         tableView.register(QYReaderInfoHeaderSameCategoryCell.self, forCellReuseIdentifier: QYReaderInfoHeaderSameCategoryCell.reuseIdentifier)
         tableView.register(QYReaderInfoTableHeaderView.self, forHeaderFooterViewReuseIdentifier: QYReaderInfoTableHeaderView.reuseIdentifier)
@@ -74,11 +178,11 @@ class QYReaderInfoHeaderView: UIView {
             tableView.contentInsetAdjustmentBehavior = .never
         }
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 220.0
+        tableView.estimatedRowHeight = QYInch.readerInfoUser.height
         
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = QYInch.readerInfoHeader.height
-        logDebug("estimatedSectionHeaderHeight =\(QYInch.readerInfoHeader.height)")
+        
         tableView.sectionFooterHeight = UITableView.automaticDimension
         tableView.estimatedSectionFooterHeight = 0.0
 
@@ -88,13 +192,10 @@ class QYReaderInfoHeaderView: UIView {
     }()
     var sectionItems: [QYReaderInfoCellType]? {
         didSet {
-            if let sectionItems = sectionItems {
-                let headerItem = sectionItems.first?.headerItem
-                tableHeaderView.config(headerItem: headerItem)
-                tableView.reloadData()
-            }
+            tableView.reloadData()
         }
     }
+    var updateColors: ((_ colors: UIImageColors) -> Void)?
     override init(frame: CGRect) {
         super.init(frame: frame)
         isSkeletonable = true
@@ -121,15 +222,34 @@ extension QYReaderInfoHeaderView: SkeletonTableViewDelegate {
         let sectionItem = sectionItems?[indexPath.section + 1]
         return sectionItem?.cellHeight ?? 0
     }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section != 0 {
+            return 0
+        }
+        let sectionItem = sectionItems?[section]
+        return sectionItem?.cellHeight ?? 0
+    }
     func collectionSkeletonView(_ skeletonView: UITableView, identifierForHeaderInSection section: Int) -> ReusableHeaderFooterIdentifier? {
+        if section != 0 {
+            return nil
+        }
         return QYReaderInfoTableHeaderView.reuseIdentifier
     }
     func collectionSkeletonView(_ skeletonView: UITableView, identifierForFooterInSection section: Int) -> ReusableHeaderFooterIdentifier? {
         return nil
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section != 0 {
+            return nil
+        }
         let header = tableView
             .dequeueReusableHeaderFooterView(withIdentifier: QYReaderInfoTableHeaderView.reuseIdentifier) as! QYReaderInfoTableHeaderView
+        let headerItem = sectionItems?.first?.headerItem
+//        header.delegate = self
+        header.updateColors = { [weak self] colors in
+            self?.updateColors?(colors)
+        }
+        header.config(headerItem: headerItem)
         return header
     }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

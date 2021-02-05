@@ -26,4 +26,17 @@ class QYHelper {
             completion()
         }
     }
+    
+    /// 根据总数和列数得出行数 总数为0则行数为0
+    /// - Parameters:
+    ///   - count: 总数
+    ///   - column: 列数
+    /// - Returns:
+    class func rowNumber(for count: Int,
+             column: Int) -> Int {
+        if count == 0 {
+            return 0
+        }
+        return (count - 1) / column + 1
+    }
 }

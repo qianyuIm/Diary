@@ -95,6 +95,8 @@
 		EF6C390625CA714F00ABC4A1 /* readerInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = EF6C390525CA714F00ABC4A1 /* readerInfo.json */; };
 		EF6C390925CA71F500ABC4A1 /* QYHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C390825CA71F500ABC4A1 /* QYHelper.swift */; };
 		EF6C391025CA79D600ABC4A1 /* QYInch+Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C390F25CA79D600ABC4A1 /* QYInch+Reader.swift */; };
+		EF79590225CCF8DD00D38687 /* QYColor+ReaderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79590125CCF8DD00D38687 /* QYColor+ReaderInfo.swift */; };
+		EF79595D25CD43AC00D38687 /* QYReaderInfoNavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79595C25CD43AC00D38687 /* QYReaderInfoNavigationTitleView.swift */; };
 		EF7EBB9625BECDCC007D0003 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EBB9525BECDCC007D0003 /* R.generated.swift */; };
 		EF8793B225C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */; };
 		EF9B3B9125C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */; };
@@ -227,6 +229,8 @@
 		EF6C390525CA714F00ABC4A1 /* readerInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = readerInfo.json; sourceTree = "<group>"; };
 		EF6C390825CA71F500ABC4A1 /* QYHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYHelper.swift; sourceTree = "<group>"; };
 		EF6C390F25CA79D600ABC4A1 /* QYInch+Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYInch+Reader.swift"; sourceTree = "<group>"; };
+		EF79590125CCF8DD00D38687 /* QYColor+ReaderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYColor+ReaderInfo.swift"; sourceTree = "<group>"; };
+		EF79595C25CD43AC00D38687 /* QYReaderInfoNavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderInfoNavigationTitleView.swift; sourceTree = "<group>"; };
 		EF7EBB9525BECDCC007D0003 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYColor+PrivacyPolicy.swift"; sourceTree = "<group>"; };
 		EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYAlert+PrivacyPolicy.swift"; sourceTree = "<group>"; };
@@ -852,6 +856,7 @@
 			children = (
 				EF4B125125B1748D0055C4D2 /* QYColor.swift */,
 				EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */,
+				EF79590125CCF8DD00D38687 /* QYColor+ReaderInfo.swift */,
 			);
 			path = Color;
 			sourceTree = "<group>";
@@ -991,6 +996,7 @@
 				EFD8C41C25C9333500F740B5 /* QYReaderInfoHeaderView.swift */,
 				EFD8C42025C9357800F740B5 /* QYReaderInfoChaptersView.swift */,
 				EF6C390125CA6D7600ABC4A1 /* QYReaderInfoHeaderCell.swift */,
+				EF79595C25CD43AC00D38687 /* QYReaderInfoNavigationTitleView.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -1157,6 +1163,7 @@
 			files = (
 				EF8793B225C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift in Sources */,
 				EF4B125725B1748D0055C4D2 /* QYHeaders.swift in Sources */,
+				EF79590225CCF8DD00D38687 /* QYColor+ReaderInfo.swift in Sources */,
 				EF6C38C025CA3C4600ABC4A1 /* QYReaderMapJson.swift in Sources */,
 				EF4E3C1525B6B29600001B5D /* QYCurvedTabbarItemContentView.swift in Sources */,
 				EF4B121525B173490055C4D2 /* QianyuWrapper.swift in Sources */,
@@ -1268,6 +1275,7 @@
 				EF4B121025B173490055C4D2 /* MJRefreshFooter+Rx.swift in Sources */,
 				EFD8C42125C9357800F740B5 /* QYReaderInfoChaptersView.swift in Sources */,
 				EFD8C31725C8FBA500F740B5 /* QYReaderApi.swift in Sources */,
+				EF79595D25CD43AC00D38687 /* QYReaderInfoNavigationTitleView.swift in Sources */,
 				EFD7931325BE66090093F5FD /* QYIconFontDiary.swift in Sources */,
 				EF4B12A525B175C00055C4D2 /* QYBorderButton.swift in Sources */,
 				EFD8C41425C9213700F740B5 /* XHLaunchAdImageView+XHLaunchAdCache.m in Sources */,

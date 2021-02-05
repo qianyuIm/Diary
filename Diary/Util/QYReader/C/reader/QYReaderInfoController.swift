@@ -10,6 +10,7 @@ import UIKit
 import GKPageSmoothView
 import JXSegmentedView
 import SkeletonView
+import UIImageColors
 class QYReaderInfoController: QYVMController<QYReaderInfoViewModel> {
 
     private var bookId: String
@@ -20,33 +21,55 @@ class QYReaderInfoController: QYVMController<QYReaderInfoViewModel> {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    private let segmentedViewHeight: CGFloat = QYInch.value(60)
+    private let segmentedViewHeight: CGFloat = QYInch.value(50)
     private let segmentedTitleViewHeight: CGFloat = QYInch.value(40)
-
+    private var isTitleViewShow: Bool = false
+    lazy var titleView: QYReaderInfoNavigationTitleView = {
+        let view = QYReaderInfoNavigationTitleView(frame: CGRect(x: 0, y: 0, width: QYInch.screenWidth - 100, height: 44))
+        return view
+    }()
     lazy var headerView: QYReaderInfoHeaderView = {
         let header = QYReaderInfoHeaderView(frame: CGRect(x: 0, y: 0, width: QYInch.screenWidth, height: QYInch.screenHeight))
+        header.backgroundColor = QYColor.backgroundColor
+        header.updateColors = { [weak self] colors in
+            self?.updateColors(colors)
+        }
         return header
     }()
     lazy var segmentedTitleView: JXSegmentedView = {
         let segmentedView = JXSegmentedView(frame: CGRect(x: 0, y: (segmentedViewHeight - segmentedTitleViewHeight) / 2, width: QYInch.screenWidth, height: segmentedTitleViewHeight))
         segmentedView.delegate = self
-        segmentedView.backgroundColor = QYColor.random
+        segmentedView.contentEdgeInsetLeft = 16
+        segmentedView.backgroundColor = QYColor.backgroundColor
+        
+        let lineView = JXSegmentedIndicatorLineView()
+        lineView.lineStyle = .lengthen
+        lineView.indicatorColor = QYColor.colorDDD
+        segmentedView.indicators = [lineView]
         return segmentedView
     }()
-    var segmentedDataSource = JXSegmentedTitleDataSource()
+    lazy var segmentedDataSource: JXSegmentedNumberDataSource = {
+        let dataSource = JXSegmentedNumberDataSource()
+        dataSource.titleNormalColor = QYColor.colorDDD
+        dataSource.titleSelectedColor = QYColor.colorDDD
+        dataSource.titleNormalFont = QYFont.fontMedium(15)
+        dataSource.numberFont = QYFont.fontRegular(11)
+        dataSource.numberOffset = CGPoint(x: 10, y: 6)
+        dataSource.itemSpacing = QYInch.value(50)
+        dataSource.isItemSpacingAverageEnabled = false
+        dataSource.numberBackgroundColor = .clear
+        dataSource.numberTextColor = QYColor.colorDDD
+        return dataSource
+    }()
     lazy var segmentedView: UIView = {
         let titleView = UIView(frame: CGRect(x: 0, y: 0, width: QYInch.screenWidth, height: segmentedViewHeight))
-        let topView = UIView()
+        titleView.backgroundColor = QYColor.backgroundColor
+        let topView = UIView(frame: CGRect(x: (QYInch.screenWidth - QYInch.value(60)) / 2, y: 4, width: QYInch.value(60), height: 5))
         topView.isSkeletonable = true
-        topView.backgroundColor = .red
+        topView.backgroundColor = QYColor.colorDDD
         topView.ext.addRoundCorners(.allCorners, radius: 3)
+        titleView.addSubview(segmentedTitleView)
         titleView.addSubview(topView)
-        topView.snp.makeConstraints { (make) in
-            make.top.equalTo(5)
-            make.centerX.equalToSuperview()
-            make.width.equalTo(QYInch.value(60))
-            make.height.equalTo(QYInch.value(6))
-        }
         return titleView
     }()
     
@@ -59,7 +82,6 @@ class QYReaderInfoController: QYVMController<QYReaderInfoViewModel> {
         smoothView.isBottomHover = true
         smoothView.isAllowDragBottom = true
         smoothView.isAllowDragScroll = true
-        smoothView.isControlVerticalIndicator = true
         return smoothView
     }()
     override func viewDidLoad() {
@@ -68,8 +90,12 @@ class QYReaderInfoController: QYVMController<QYReaderInfoViewModel> {
         // Do any additional setup after loading the view.
         
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func makeConstant() {
+        super.makeConstant()
+        segmentedDataSource.titles = ["章节"]
+        segmentedDataSource.numbers = [12]
+        segmentedTitleView.dataSource = segmentedDataSource
+        segmentedTitleView.contentScrollView = self.smoothView.listCollectionView
     }
     override func makeNavigationBar() {
         super.makeNavigationBar()
@@ -78,10 +104,6 @@ class QYReaderInfoController: QYVMController<QYReaderInfoViewModel> {
     override func makeUI() {
         super.makeUI()
         view.addSubview(smoothView)
-        segmentedDataSource.titles = ["章节"]
-        segmentedView.addSubview(segmentedTitleView)
-        segmentedTitleView.dataSource = segmentedDataSource
-        segmentedTitleView.contentScrollView = self.smoothView.listCollectionView
         smoothView.reloadData()
     }
 
@@ -100,7 +122,9 @@ class QYReaderInfoController: QYVMController<QYReaderInfoViewModel> {
                 self.headerView.showGradientSkeleton()
             }
         } else {
-            headerView.hideSkeleton()
+            QYHelper.mainAsync {
+                self.headerView.hideSkeleton()
+            }
         }
     }
     deinit {
@@ -110,14 +134,33 @@ class QYReaderInfoController: QYVMController<QYReaderInfoViewModel> {
     }
 }
 extension QYReaderInfoController {
+    func updateColors(_ colors: UIImageColors) {
+        self.headerView.backgroundColor = colors.primary
+        self.hbd_barTintColor = colors.primary
+    }
+    func changeNavigationTitle(_ isShow: Bool) {
+        if isShow {
+            if self.navigationItem.titleView != nil {
+                return
+            }
+            self.navigationItem.titleView = titleView
+        } else {
+            if self.navigationItem.titleView == nil {
+                return
+            }
+            self.navigationItem.titleView = nil
+        }
+    }
     func refreshHeaderView(_ items: [QYReaderInfoCellType]) {
         smoothView.isUserInteractionEnabled = true
+        let infoItem = items.first?.headerItem
+        titleView.config(score: infoItem?.BookVote?.Score, name: infoItem?.Name)
         self.headerView.sectionItems = items
         let headerHeight = headerView.calculateViewHeight()
         headerView.frame = CGRect(x: 0, y: 0, width: QYInch.screenWidth, height: headerHeight)
         //FixBug:
         smoothView.refreshHeaderView()
-//        smoothView.reloadData()
+        smoothView.reloadData()
     }
 }
 extension QYReaderInfoController: JXSegmentedViewDelegate {
@@ -128,8 +171,38 @@ extension QYReaderInfoController: JXSegmentedViewDelegate {
     }
 }
 extension QYReaderInfoController: GKPageSmoothViewDelegate {
-    func smoothViewDidScroll(_ smoothView: GKPageSmoothView, scrollView: UIScrollView) {
-        
+    func smoothViewDragBegan(_ smoothView: GKPageSmoothView) {
+        if smoothView.isOnTop { return }
+        self.isTitleViewShow = (self.navigationItem.titleView != nil)
+    }
+    func smoothViewListScrollViewDidScroll(_ smoothView: GKPageSmoothView, scrollView: UIScrollView, contentOffset: CGPoint) {
+        if (smoothView.isOnTop) { return }
+        let offsetY = contentOffset.y
+        var alpha: CGFloat = 0
+        if offsetY <= 0 {
+            alpha = 0
+            changeNavigationTitle(false)
+        } else if offsetY > QYInch.navigationHeight {
+            alpha = 1
+            changeNavigationTitle(true)
+        } else {
+            alpha = offsetY / QYInch.navigationHeight
+            changeNavigationTitle(false)
+        }
+        self.hbd_barAlpha = Float(alpha)
+        self.hbd_setNeedsUpdateNavigationBar()
+    }
+    func smoothViewDragEnded(_ smoothView: GKPageSmoothView, isOnTop: Bool)  {
+        // titleView已经显示，不作处理
+        if self.isTitleViewShow { return }
+        if isOnTop {
+            self.hbd_barAlpha = 1.0
+            changeNavigationTitle(true)
+        } else {
+            self.hbd_barAlpha = 0.0
+            changeNavigationTitle(false)
+        }
+        self.hbd_setNeedsUpdateNavigationBar()
     }
 }
 extension QYReaderInfoController: GKPageSmoothViewDataSource {

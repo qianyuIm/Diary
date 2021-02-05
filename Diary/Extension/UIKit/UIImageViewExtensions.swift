@@ -16,11 +16,12 @@ extension QianyuWrapper where Base: UIImageView {
     ///   - placeholder:
     func setImage(with url: URL?,
                   placeholderImage placeholder: UIImage? = placeholder,
-                  isImageTransition: Bool = true) {
+                  isImageTransition: Bool = true,
+                  completed: SDExternalCompletionBlock? = nil) {
         if isImageTransition {
             base.sd_imageTransition = SDWebImageTransition.fade(duration: 0.3)
         }
-        base.sd_setImage(with: url, placeholderImage: placeholder)
+        base.sd_setImage(with: url, placeholderImage: placeholder, completed: completed)
     }
     
 }

@@ -35,6 +35,8 @@ struct QYColor {
     static let color666 = color("#666666")
     /// 999
     static let color999 = color("#999999")
+    /// DDD
+    static let colorDDD = color("#DDDDDD")
     /// 随机色
     static var random: UIColor {
         return UIColor.ext.random

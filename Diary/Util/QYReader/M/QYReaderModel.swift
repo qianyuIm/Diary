@@ -41,13 +41,13 @@ class QYReaderModel: HandyJSON {
 }
 class QYReaderVoteModel: HandyJSON {
     var book_id: Int?
-    var TotalScore: Int?
+    var TotalScore: Double?
     var VoterCount: Int?
     var Score: NSNumber?
     required init() {}
     func mapping(mapper: HelpingMapper) {
         mapper <<<
-            self.book_id <-- "Id"
+            self.book_id <-- "BookId"
     }
 }
 

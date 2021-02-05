@@ -24,10 +24,11 @@ enum QYReaderInfoCellType {
             let introHeight = intro.ext.height(QYFont.fontRegular(15), limitWidth: QYInch.screenWidth - QYInch.infoRight - QYInch.infoLeft)
             return height + introHeight
         case .sameUser(title: _, categoryCount: _, items: _):
-            let sizeHeight = QYInch.infoHeaderSameUserCollectionCoverImageBottom + QYInch.infoHeaderSameUserCollectionCoverImageTop + QYInch.infoHeaderSameUserCollectionCoverImageHeight
-            return sizeHeight
-        default:
-            return 45
+            return QYInch.readerInfoUser.height
+        case .sameCategory(title: _, userCount: _, items: let items):
+            let itemHeight = QYInch.readerInfoCategory.itemSize.height
+            let rows = QYHelper.rowNumber(for: items.count, column: 3)
+            return (rows == 0) ? itemHeight : itemHeight * CGFloat(rows)
         }
     }
     var sectionHeight: CGFloat {
@@ -40,12 +41,12 @@ enum QYReaderInfoCellType {
             let introHeight = intro.ext.height(QYFont.fontRegular(15), limitWidth: QYInch.screenWidth - QYInch.infoRight - QYInch.infoLeft)
             return height + introHeight
         case .sameUser(title: _, categoryCount: _, items: let items):
-            var height = QYInch.infoHeaderSameUserTop + QYInch.infoHeaderSameUserBottom
-            let sizeHeight = QYInch.infoHeaderSameUserCollectionCoverImageBottom + QYInch.infoHeaderSameUserCollectionCoverImageTop + QYInch.infoHeaderSameUserCollectionCoverImageHeight
-            height = height + sizeHeight * CGFloat(items.count)
+            let height = QYInch.readerInfoUser.height * CGFloat(items.count)
             return height
-        default:
-            return 45
+        case .sameCategory(title: _, userCount: _, items: let items):
+            let itemHeight = QYInch.readerInfoCategory.itemSize.height
+            let rows = QYHelper.rowNumber(for: items.count, column: 3)
+            return (rows == 0) ? itemHeight : itemHeight * CGFloat(rows)
         }
     }
     var rowsCount: Int {
@@ -81,6 +82,7 @@ extension QYReaderInfoViewModel: QYViewModelType {
     func transform(input: Input) -> Output {
         let bookInfo = requestBookInfo(bookId: input.bookId)
         let elements = BehaviorRelay<[QYReaderInfoCellType]>(value: [])
+
         // 数据源
         bookInfo.drive(onNext: {
             var cellTypes: [QYReaderInfoCellType] = []
@@ -91,12 +93,13 @@ extension QYReaderInfoViewModel: QYViewModelType {
                 cellTypes.append(.sameUser(title: "作者还写过", categoryCount: $0.SameCategoryBooks?.count ?? 0, items: $0.SameUserBooks!))
             }
 //            /// 相同类型
-//            if (($0.SameCategoryBooks?.isEmpty) == false) {
-//                cellTypes.append(.sameCategory(title: "大家还看过", userCount: $0.SameUserBooks?.count ?? 0, items: $0.SameCategoryBooks!))
-//            }
+            if (($0.SameCategoryBooks?.isEmpty) == false) {
+                cellTypes.append(.sameCategory(title: "大家还看过", userCount: $0.SameUserBooks?.count ?? 0, items: $0.SameCategoryBooks!))
+            }
             elements.accept(cellTypes)
         }).disposed(by: rx.disposeBag)
         return Output(items: elements.asDriver())
+                      
     }
 }
 extension QYReaderInfoViewModel {

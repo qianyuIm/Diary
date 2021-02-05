@@ -11,6 +11,7 @@ import GKPageSmoothView
 class QYReaderInfoChaptersView: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.backgroundColor = QYColor.backgroundColor
         tableView.delegate = self
         tableView.dataSource = self
         tableView.ext.register(UITableViewCell.self)

@@ -47,6 +47,10 @@ target 'Diary' do
   pod 'JXPagingView/Paging','~> 2.0.13'
   # 骨架
   pod 'SkeletonView', '~> 1.12.0'
+  # 星星
+  pod 'Cosmos', '~> 23.0.0'
+  # 跑马灯
+  pod 'MarqueeLabel', '~> 4.0.5'
   # 获取主色
   pod 'UIImageColors'
   # image
