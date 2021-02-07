@@ -13,19 +13,20 @@ class QYReaderInfoNavigationTitleView: UIView {
     lazy var starRatingView: CosmosView = {
         var settings = CosmosSettings.default
         settings.fillMode = .precise
-        settings.textColor = QYColor.infoDescribeColor
-        settings.starSize = 14
-        let view = CosmosView(settings: settings)
+        settings.textColor = QYColor.textDescribeColor
+        settings.starSize = 15
+        let view = CosmosView(frame: CGRect(x: 0, y: 23, width: QYInch.value(100), height: 15), settings: settings)
         view.rating = 0
         view.isSkeletonable = true
+        view.isUserInteractionEnabled = false
         return view
     }()
     lazy var nameLabel: MarqueeLabel = {
-        let label = MarqueeLabel()
+        let label = MarqueeLabel(frame: CGRect(x: 0, y: 0, width: QYInch.value(100), height: 22))
         return label
     }()
     lazy var contentView: UIView = {
-        let view = UIView()
+        let view = UIView(frame: CGRect(x: 0, y: 3, width: QYInch.value(100), height: 38))
         return view
     }()
     override init(frame: CGRect) {
@@ -33,20 +34,6 @@ class QYReaderInfoNavigationTitleView: UIView {
         addSubview(contentView)
         contentView.addSubview(nameLabel)
         contentView.addSubview(starRatingView)
-        contentView.snp.makeConstraints { (make) in
-            make.left.equalToSuperview()
-            make.centerY.equalToSuperview().offset(44)
-            make.width.equalTo(QYInch.value(100))
-        }
-        nameLabel.snp.makeConstraints { (make) in
-            make.left.top.equalToSuperview()
-            make.width.equalTo(QYInch.value(100))
-        }
-        starRatingView.snp.makeConstraints { (make) in
-            make.top.equalTo(nameLabel.snp.bottom)
-                .offset(4)
-            make.left.bottom.equalToSuperview()
-        }
     }
     
     required init?(coder: NSCoder) {
@@ -54,14 +41,12 @@ class QYReaderInfoNavigationTitleView: UIView {
     }
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
-        guard newSuperview != nil else {
-            return
-        }
-        contentView.snp.updateConstraints { (make) in
-            make.centerY.equalToSuperview().offset(0)
-        }
-        UIView.animate(withDuration: 0.3) {
-            self.setNeedsLayout()
+        if newSuperview != nil {
+            UIView.animate(withDuration: 0.3) {
+                self.contentView.ext.y = 3
+            }
+        } else {
+            self.contentView.ext.y = 44
         }
     }
     func config(score: NSNumber?, name: String?) {

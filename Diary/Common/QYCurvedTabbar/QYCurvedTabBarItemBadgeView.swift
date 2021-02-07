@@ -125,7 +125,7 @@ class QYCurvedTabBarItemBadgeView: UIView {
                     dragState == .failed {
             if r1 <= 6 {
                 // 消失
-                let duration = self.frontView.boomAnimation()
+                let duration = self.frontView.addBoomAnimation()
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
                     self.delegate?.badgeViewDidDrageRemove()
                 }

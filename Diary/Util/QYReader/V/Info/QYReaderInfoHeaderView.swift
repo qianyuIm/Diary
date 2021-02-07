@@ -28,7 +28,7 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
         let label = UILabel()
         label.isSkeletonable = true
         label.font = QYFont.fontMedium(15)
-        label.textColor = QYColor.infoTitleColor
+        label.textColor = QYColor.textTitleColor
         label.textAlignment = .left
         return label
     }()
@@ -37,7 +37,7 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
         label.isSkeletonable = true
         label.font = QYFont.fontRegular(13)
         label.textAlignment = .left
-        label.textColor = QYColor.infoDescribeColor
+        label.textColor = QYColor.textDescribeColor
         return label
     }()
     lazy var cNameLabel: UILabel = {
@@ -45,7 +45,7 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
         label.isSkeletonable = true
         label.font = QYFont.fontRegular(13)
         label.textAlignment = .left
-        label.textColor = QYColor.infoDescribeColor
+        label.textColor = QYColor.textDescribeColor
         return label
     }()
     lazy var statusLabel: UILabel = {
@@ -53,16 +53,36 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
         label.isSkeletonable = true
         label.font = QYFont.fontRegular(13)
         label.textAlignment = .left
-        label.textColor = QYColor.infoDescribeColor
+        label.textColor = QYColor.textDescribeColor
         return label
+    }()
+    lazy var pulsingView: UIView = {
+        let view = UIView()
+//        view.backgroundColor = .red
+        return view
+    }()
+    lazy var joinButton: QYBorderButton = {
+        let sender = QYBorderButton()
+        sender.isHidden = true
+        sender.backgroundColor = QYColor.backgroundColor
+        sender.borderWidth = 1
+        sender.borderColor = QYColor.textDescribeColor
+        sender.titleLabel?.font = QYFont.fontMedium(15)
+        sender.setTitleColor(QYColor.textTitleColor, for: .normal)
+        sender.setTitleColor(QYColor.textDescribeColor, for: .selected)
+        sender.setTitle("已订阅", for: .selected)
+        sender.setTitle("+ 订阅", for: .normal)
+        sender.addTarget(self, action: #selector(joinButtonDidSelect(_:)), for: .touchUpInside)
+        return sender
     }()
     lazy var starRatingView: CosmosView = {
         var settings = CosmosSettings.default
         settings.fillMode = .precise
-        settings.textColor = QYColor.infoDescribeColor
+        settings.textColor = QYColor.textDescribeColor
         let view = CosmosView(settings: settings)
         view.rating = 0
         view.isSkeletonable = true
+        view.isUserInteractionEnabled = false
         return view
     }()
     lazy var introLabel: UILabel = {
@@ -71,7 +91,7 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
         label.numberOfLines = 0
         label.font = QYFont.fontRegular(15)
         label.skeletonCornerRadius = 5
-        label.textColor = QYColor.infoDescribeColor
+        label.textColor = QYColor.textDescribeColor
         return label
     }()
     var updateColors: ((_ colors: UIImageColors) -> Void)?
@@ -85,8 +105,10 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
         labelContentview.addSubview(authorLabel)
         labelContentview.addSubview(cNameLabel)
         labelContentview.addSubview(statusLabel)
+        labelContentview.addSubview(pulsingView)
+        labelContentview.addSubview(joinButton)
         labelContentview.addSubview(starRatingView)
-
+        
         contentView.addSubview(introLabel)
         coverImageView.snp.makeConstraints { (make) in
             make.left.equalTo(QYInch.infoLeft)
@@ -124,6 +146,19 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
                 .offset(QYInch.value(4))
             make.height.greaterThanOrEqualTo(labelTempHeight)
         }
+        
+        pulsingView.snp.makeConstraints { (make) in
+            make.centerY.equalTo(statusLabel)
+            make.right.equalToSuperview()
+            make.width.equalTo(70)
+            make.height.equalTo(30)
+        }
+        joinButton.snp.makeConstraints { (make) in
+            make.centerY.equalTo(statusLabel)
+            make.right.equalToSuperview()
+            make.width.equalTo(70)
+            make.height.equalTo(30)
+        }
         starRatingView.snp.makeConstraints { (make) in
             make.left.right.equalTo(nameLabel)
             make.top.equalTo(statusLabel.snp.bottom)
@@ -144,12 +179,14 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    var headerItem: QYReaderInfoModel?
     func config(headerItem: QYReaderInfoModel?) {
+        self.headerItem = headerItem
         coverImageView.ext.setImage(with: headerItem?.book_img?.ext.url) { [weak self](image, error, cacheType, imageUrl) in
             if let image = image {
-                guard let colors = image.getColors(quality: .low) else { return }
+                guard let colors = image.getColors(quality: .high) else { return }
                 self?.contentView.backgroundColor = colors.primary
-                
+                self?.joinButton.backgroundColor = colors.primary
                 self?.updateColors?(colors)
             }
         }
@@ -160,8 +197,33 @@ class QYReaderInfoTableHeaderView: UITableViewHeaderFooterView {
         introLabel.text = headerItem?.Desc
         starRatingView.rating = (headerItem?.BookVote?.Score?.doubleValue ?? 0) / 2
         starRatingView.text = (headerItem?.BookVote?.Score?.stringValue ?? "0")  + " 分"
+        // 判断状态
+        let bookShelfItem = QYBookShelfModel.query(headerItem?.book_id)
+        joinButton.isHidden = false
+        if bookShelfItem != nil {
+            joinButton.isSelected = true
+        } else {
+            joinButton.isSelected = false
+            // 动画
+            pulsingView.addPulsingAnimation(CGSize(width: 140, height: 60), pulseNum: 4, animationDuration: 6, delayDuration: 200, backgroundColor: QYColor.textDescribeColor.cgColor)
+        }
     }
-    
+    @objc func joinButtonDidSelect(_ sender: QYBorderButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            // 加入书架
+            let bookShelfItem = QYBookShelfModel()
+            bookShelfItem.book_id = headerItem?.book_id
+            bookShelfItem.book_name = headerItem?.Name
+            bookShelfItem.book_img = headerItem?.book_img
+            QYBookShelfModel.insert(bookShelfModel: bookShelfItem)
+        } else {
+            // 移除书架
+            QYBookShelfModel.delete(book_id: headerItem?.book_id)
+        }
+        // 发出通知更新书架
+        NotificationCenter.default.ext.post(customeNotification: .reloadBookSelf)
+    }
 }
 class QYReaderInfoHeaderView: UIView {
     lazy var tableView: UITableView = {

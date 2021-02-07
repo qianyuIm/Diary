@@ -8,6 +8,5 @@
 
 import Foundation
 extension QYColor {
-    static let infoTitleColor = color("FFFFFF")
-    static let infoDescribeColor = color("C5C5C5")
+    
 }

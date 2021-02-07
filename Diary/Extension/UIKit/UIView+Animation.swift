@@ -12,7 +12,7 @@ extension UIView {
     
     // 摇摆~ 摇摆~ 震动~ 震动~
     @discardableResult
-    func boomAnimation() -> Double {
+    func addBoomAnimation() -> Double {
         // 粒子
         if boomCells == nil {
             boomCells = [CALayer]()
@@ -44,6 +44,47 @@ extension UIView {
             }
         }
         return maximumBoomCellDuration
+    }
+    /// 脉冲动画
+    func addPulsingAnimation(_ pulseSize: CGSize,
+                             pulseNum: Int = 2,
+                             animationDuration: TimeInterval = 3,
+                             delayDuration: TimeInterval = 0,
+                             backgroundColor: CGColor) {
+        let pulsator = CAReplicatorLayer()
+        pulsator.instanceCount = pulseNum
+        pulsator.instanceDelay = animationDuration / Double(pulseNum)
+        self.layer.insertSublayer(pulsator, below: self.layer)
+        pulsator.position = CGPoint(x: self.ext.width / 2, y:  self.ext.height / 2)
+        let pulse = CALayer()
+        pulse.bounds = CGRect(origin: .zero, size: pulseSize)
+        pulse.cornerRadius = pulseSize.height / 2
+        pulse.backgroundColor = backgroundColor
+        pulse.contentsScale = UIScreen.main.scale
+        pulse.opacity = 0
+        pulsator.addSublayer(pulse)
+        
+        let alpha = backgroundColor.alpha
+        
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale.xy")
+        scaleAnimation.fromValue = 0.4
+        scaleAnimation.toValue = 1.0
+        scaleAnimation.duration = animationDuration
+        scaleAnimation.beginTime = 0
+        
+        let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+        opacityAnimation.duration = animationDuration
+        opacityAnimation.values = [alpha, alpha * 0.5, 0.0]
+        opacityAnimation.keyTimes = [0.0, 0.3, 1.0]
+        opacityAnimation.beginTime = 0
+        
+        let animationGroup = CAAnimationGroup()
+        animationGroup.animations = [scaleAnimation, opacityAnimation]
+        animationGroup.duration = animationDuration + delayDuration
+        animationGroup.repeatCount = MAXFLOAT
+        animationGroup.timingFunction = .init(name: .easeInEaseOut)
+        
+        pulse.add(animationGroup, forKey: nil)
     }
 }
 private var kBoomCellsNameKey = "BoomCells"

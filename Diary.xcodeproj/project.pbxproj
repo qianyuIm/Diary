@@ -99,6 +99,7 @@
 		EF79595D25CD43AC00D38687 /* QYReaderInfoNavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79595C25CD43AC00D38687 /* QYReaderInfoNavigationTitleView.swift */; };
 		EF7EBB9625BECDCC007D0003 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EBB9525BECDCC007D0003 /* R.generated.swift */; };
 		EF8793B225C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */; };
+		EF89D40225CFBAE600B1BF53 /* QYBookShelfModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89D40125CFBAE600B1BF53 /* QYBookShelfModel.swift */; };
 		EF9B3B9125C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */; };
 		EFB05CA725C1479600D4EECA /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB05CA625C1479600D4EECA /* BundleExtensions.swift */; };
 		EFB05CEA25C167FA00D4EECA /* QYJPUSHHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB05CE925C167FA00D4EECA /* QYJPUSHHelper.swift */; };
@@ -233,6 +234,7 @@
 		EF79595C25CD43AC00D38687 /* QYReaderInfoNavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYReaderInfoNavigationTitleView.swift; sourceTree = "<group>"; };
 		EF7EBB9525BECDCC007D0003 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		EF8793B125C3ABF300AD4090 /* QYColor+PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYColor+PrivacyPolicy.swift"; sourceTree = "<group>"; };
+		EF89D40125CFBAE600B1BF53 /* QYBookShelfModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYBookShelfModel.swift; sourceTree = "<group>"; };
 		EF9B3B9025C2D67D00B9870E /* QYAlert+PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QYAlert+PrivacyPolicy.swift"; sourceTree = "<group>"; };
 		EFB05CA625C1479600D4EECA /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		EFB05CAE25C1669C00D4EECA /* Diary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Diary.entitlements; sourceTree = "<group>"; };
@@ -830,6 +832,7 @@
 		EF4E3C0425B6AC3600001B5D /* BookShelf */ = {
 			isa = PBXGroup;
 			children = (
+				EF89D40025CFBA8F00B1BF53 /* M */,
 				EF4E3C0A25B6AC6A00001B5D /* C */,
 			);
 			path = BookShelf;
@@ -859,6 +862,14 @@
 				EF79590125CCF8DD00D38687 /* QYColor+ReaderInfo.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		EF89D40025CFBA8F00B1BF53 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				EF89D40125CFBAE600B1BF53 /* QYBookShelfModel.swift */,
+			);
+			path = M;
 			sourceTree = "<group>";
 		};
 		EFB05CAA25C1641B00D4EECA /* menu */ = {
@@ -1178,6 +1189,7 @@
 				EF4B129F25B175B80055C4D2 /* QYAlert.swift in Sources */,
 				EFD8C35025C8FDC400F740B5 /* QYReaderInfoController.swift in Sources */,
 				EF4B120E25B173490055C4D2 /* ObservableExtensions.swift in Sources */,
+				EF89D40225CFBAE600B1BF53 /* QYBookShelfModel.swift in Sources */,
 				EF15E5EB25C2914300DCE201 /* QYRefreshFastHeader.swift in Sources */,
 				EF4B121B25B173490055C4D2 /* DoubleExtensions.swift in Sources */,
 				EF4E3C0625B6AC4C00001B5D /* QYBookShelfController.swift in Sources */,

@@ -12,6 +12,8 @@ import GRDB
 struct QYDataBaseTableName {
     /// 阅读时长统计
     static let readerStatistical = "reader_statistical"
+    /// 书架
+    static let readerBookShelf = "reader_bookShelf"
 }
 class QYDataBaseManager {
     static let shared = QYDataBaseManager()

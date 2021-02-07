@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,49 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hr8-2G-47T">
-                                <rect key="frame" x="40" y="375" width="334" height="156.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wwww" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHh-db-veL">
-                                        <rect key="frame" x="29" y="24" width="51" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8v-L0-q00">
-                                        <rect key="frame" x="29" y="64.5" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOG-bs-f06">
-                                        <rect key="frame" x="8" y="108.5" width="240" height="40"/>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="ubo-ZP-JZP"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="IOG-bs-f06" firstAttribute="top" secondItem="U8v-L0-q00" secondAttribute="bottom" constant="23" id="0j7-6p-3ZJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="IOG-bs-f06" secondAttribute="bottom" constant="8" id="4RD-Cs-AwH"/>
-                                    <constraint firstItem="U8v-L0-q00" firstAttribute="top" secondItem="vHh-db-veL" secondAttribute="bottom" constant="20" id="4qK-CE-M5O"/>
-                                    <constraint firstItem="vHh-db-veL" firstAttribute="leading" secondItem="hr8-2G-47T" secondAttribute="leading" constant="29" id="5gb-30-Bdl"/>
-                                    <constraint firstAttribute="trailing" secondItem="IOG-bs-f06" secondAttribute="trailing" constant="86" id="ASF-aq-bNi"/>
-                                    <constraint firstItem="IOG-bs-f06" firstAttribute="leading" secondItem="hr8-2G-47T" secondAttribute="leading" constant="8" id="Fj7-tg-8dN"/>
-                                    <constraint firstItem="U8v-L0-q00" firstAttribute="leading" secondItem="hr8-2G-47T" secondAttribute="leading" constant="29" id="a0D-MY-jSq"/>
-                                    <constraint firstItem="vHh-db-veL" firstAttribute="top" secondItem="hr8-2G-47T" secondAttribute="top" constant="24" id="y4k-AE-duj"/>
-                                </constraints>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2F-9i-WwZ">
+                                <rect key="frame" x="40" y="144" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.71842893839999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是副标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgm-k1-NSs">
+                                <rect key="frame" x="40" y="195" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是副标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wF-Zc-PfM">
+                                <rect key="frame" x="40" y="246" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcH-UZ-2mp">
+                                <rect key="frame" x="121" y="315" width="146" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hr8-2G-47T" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ZFq-6o-rn0"/>
-                            <constraint firstItem="hr8-2G-47T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ZLt-iu-Vlp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hr8-2G-47T" secondAttribute="trailing" constant="40" id="eqJ-4f-0Ew"/>
-                            <constraint firstItem="hr8-2G-47T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="upa-Vk-DaS"/>
+                            <constraint firstItem="2wF-Zc-PfM" firstAttribute="top" secondItem="Bgm-k1-NSs" secondAttribute="bottom" constant="30" id="FCe-XH-paL"/>
+                            <constraint firstItem="F2F-9i-WwZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="IhT-hO-tMr"/>
+                            <constraint firstItem="F2F-9i-WwZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Obp-7L-tYf"/>
+                            <constraint firstItem="Bgm-k1-NSs" firstAttribute="top" secondItem="F2F-9i-WwZ" secondAttribute="bottom" constant="30" id="XgR-Yk-Qwu"/>
+                            <constraint firstItem="Bgm-k1-NSs" firstAttribute="leading" secondItem="F2F-9i-WwZ" secondAttribute="leading" id="Xsh-Yg-nav"/>
+                            <constraint firstItem="2wF-Zc-PfM" firstAttribute="leading" secondItem="Bgm-k1-NSs" secondAttribute="leading" id="iES-LT-32f"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -68,12 +58,4 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

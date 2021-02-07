@@ -23,8 +23,10 @@ struct QYColor {
     static let navigationBarTitleTextColor = color("#DDDDDD")
     /// backgroundColor
     static let backgroundColor = color("#323232")
-    /// 主色 F83245
-    static let mainColor = color("#F83245")
+    /// textTitleColor
+    static let textTitleColor = color("#F1F1F1")
+    /// textDescribeColor
+    static let textDescribeColor = color("#DDDDDD")
     /// placeholder
     static let placeholder = color("#EEEEEE")
     /// 黑色

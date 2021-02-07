@@ -122,9 +122,7 @@ class QYReaderInfoController: QYVMController<QYReaderInfoViewModel> {
                 self.headerView.showGradientSkeleton()
             }
         } else {
-            QYHelper.mainAsync {
-                self.headerView.hideSkeleton()
-            }
+            self.headerView.hideSkeleton()
         }
     }
     deinit {
@@ -134,7 +132,9 @@ class QYReaderInfoController: QYVMController<QYReaderInfoViewModel> {
     }
 }
 extension QYReaderInfoController {
+    /// 最好是后台传颜色
     func updateColors(_ colors: UIImageColors) {
+        self.view.backgroundColor = colors.primary
         self.headerView.backgroundColor = colors.primary
         self.hbd_barTintColor = colors.primary
     }

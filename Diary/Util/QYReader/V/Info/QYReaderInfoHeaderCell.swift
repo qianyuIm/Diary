@@ -13,6 +13,7 @@ class QYReaderInfoHeaderSameUserCell: UITableViewCell {
     static let reuseIdentifier = "ReaderInfoHeaderSameUserCell"
     lazy var coverImageView: UIImageView = {
         let imageV = UIImageView()
+        imageV.ext.addRoundCorners(.allCorners, radius: 3)
         imageV.isSkeletonable = true
         return imageV
     }()
@@ -26,7 +27,7 @@ class QYReaderInfoHeaderSameUserCell: UITableViewCell {
         label.isSkeletonable = true
         label.font = QYFont.fontRegular(13)
         label.textAlignment = .left
-        label.textColor = QYColor.infoTitleColor
+        label.textColor = QYColor.textTitleColor
         label.text = " "
         return label
     }()
@@ -35,7 +36,7 @@ class QYReaderInfoHeaderSameUserCell: UITableViewCell {
         label.isSkeletonable = true
         label.font = QYFont.fontRegular(11)
         label.textAlignment = .left
-        label.textColor = QYColor.infoDescribeColor
+        label.textColor = QYColor.textDescribeColor
         label.text = " "
         return label
     }()
@@ -45,7 +46,7 @@ class QYReaderInfoHeaderSameUserCell: UITableViewCell {
         label.font = QYFont.fontRegular(11)
         label.textAlignment = .left
         label.numberOfLines = 0
-        label.textColor = QYColor.infoDescribeColor
+        label.textColor = QYColor.textDescribeColor
         label.text = " "
         return label
     }()
@@ -106,13 +107,14 @@ class QYReaderInfoHeaderSameUserCell: UITableViewCell {
 class QYReaderInfoHeaderSameCategoryCollectionCell: UICollectionViewCell {
     lazy var coverImageView: UIImageView = {
         let imageV = UIImageView()
+        imageV.ext.addRoundCorners(.allCorners, radius: 3)
         imageV.isSkeletonable = true
         return imageV
     }()
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = QYFont.fontMedium(15)
-        label.textColor = QYColor.infoTitleColor
+        label.textColor = QYColor.textTitleColor
         label.textAlignment = .center
         return label
     }()
