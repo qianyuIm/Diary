@@ -39,6 +39,7 @@ target 'Diary' do
   pod 'R.swift', '~> 5.3.0'
   # launch Ad 自定义后台时长
 #  pod 'XHLaunchAd', '~> 3.9.12'
+  pod 'Google-Mobile-Ads-SDK', '~> 8.0.0'
   # alert
   pod 'SwiftEntryKit', '~> 1.2.6'
   # page ScrollView 

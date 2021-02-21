@@ -14,6 +14,33 @@ PODS:
   - FLEX (4.2.2)
   - GDPerformanceView-Swift (2.1.1)
   - GKPageSmoothView/Swift (1.5.3)
+  - Google-Mobile-Ads-SDK (8.0.0):
+    - GoogleAppMeasurement (~> 7.0)
+    - GoogleUserMessagingPlatform (~> 1.1)
+  - GoogleAppMeasurement (7.6.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/MethodSwizzler (~> 7.0)
+    - GoogleUtilities/Network (~> 7.0)
+    - "GoogleUtilities/NSData+zlib (~> 7.0)"
+    - nanopb (~> 2.30907.0)
+  - GoogleUserMessagingPlatform (1.4.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.2.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.2.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (7.2.2):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.2.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.2.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.2.2)"
+  - GoogleUtilities/Reachability (7.2.2):
+    - GoogleUtilities/Logger
   - GRDB.swift (5.2.0):
     - GRDB.swift/standard (= 5.2.0)
   - GRDB.swift/standard (5.2.0)
@@ -46,8 +73,14 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - nanopb (2.30907.0):
+    - nanopb/decode (= 2.30907.0)
+    - nanopb/encode (= 2.30907.0)
+  - nanopb/decode (2.30907.0)
+  - nanopb/encode (2.30907.0)
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
+  - PromisesObjC (1.2.12)
   - QuickLayout (3.0.0)
   - R.swift (5.3.1):
     - R.swift.Library (~> 5.3.0)
@@ -105,6 +138,7 @@ DEPENDENCIES:
   - FLEX (~> 4.2.2)
   - GDPerformanceView-Swift (~> 2.1.1)
   - GKPageSmoothView/Swift (~> 1.5.3)
+  - Google-Mobile-Ads-SDK (~> 8.0.0)
   - GRDB.swift
   - HandyJSON (~> 5.0.2)
   - HBDNavigationBar (~> 1.7.7)
@@ -114,7 +148,7 @@ DEPENDENCIES:
   - JPush (~> 3.3.6)
   - JXPagingView/Paging (~> 2.0.13)
   - JXSegmentedView (~> 1.2.7)
-  - MarqueeLabel
+  - MarqueeLabel (~> 4.0.5)
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh (~> 3.4.3)
   - MLeaksFinder
@@ -155,6 +189,10 @@ SPEC REPOS:
     - FLEX
     - GDPerformanceView-Swift
     - GKPageSmoothView
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
     - GRDB.swift
     - HandyJSON
     - HBDNavigationBar
@@ -170,7 +208,9 @@ SPEC REPOS:
     - MJRefresh
     - MLeaksFinder
     - Moya
+    - nanopb
     - "NSObject+Rx"
+    - PromisesObjC
     - QuickLayout
     - R.swift
     - R.swift.Library
@@ -220,6 +260,10 @@ SPEC CHECKSUMS:
   FLEX: dbd68ae9c67fcc872c79c9e5a728f38243dfaa78
   GDPerformanceView-Swift: 22d964fe40b19e3d914dba2586237d064de8fd77
   GKPageSmoothView: aca71e90c457d1b33df2d67a5bffe3b0f4d93e46
+  Google-Mobile-Ads-SDK: 9509c62617e8d77e2524833eed0b73dd028f0bc6
+  GoogleAppMeasurement: c542a2feaac9ab98fd074e8f1a02c3585bbfbd47
+  GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
+  GoogleUtilities: 31c5b01f978a70c6cff2afc6272b3f1921614b43
   GRDB.swift: f44f61fd032e176e3aadb1f70e15656dc50ca018
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   HBDNavigationBar: 6ba38b99637039c831ce460364d5398f29fa0685
@@ -235,7 +279,9 @@ SPEC CHECKSUMS:
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
@@ -262,6 +308,6 @@ SPEC CHECKSUMS:
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: 7dd76d9c2a3341dee5fd6c3a5d946d5764e22a85
+PODFILE CHECKSUM: a5bc9b60f70f49515ea80bbfb6c1f5c53768ae2f
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

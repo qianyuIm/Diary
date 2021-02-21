@@ -12,6 +12,8 @@ import MLeaksFinder
 import FLEX
 #endif
 import SDWebImageWebPCoder
+import GoogleMobileAds
+
 extension AppDelegate {
     func configurationVenders(_ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         setupSwiftyBeaver()
@@ -19,6 +21,7 @@ extension AppDelegate {
         setupFLEX()
         setupSdWebImage()
         setupReachability()
+        setupAds()
     }
 }
 
@@ -89,6 +92,10 @@ private extension AppDelegate {
     }
     func setupReachability() {
         QYReachabilityHelper.shared.startNotifier()
+    }
+    func setupAds() {
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [kGADSimulatorID as! String,"0685949695c1c02ad320178841cf3001"]
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
 }
 //MARK:推送 -- JPUSHRegisterDelegate

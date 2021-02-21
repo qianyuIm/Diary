@@ -1447,7 +1447,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9W33GSKZVH;
-				INFOPLIST_FILE = "/Users/lipengyuan/Downloads/Git下载/自己写的/Diary/Diary/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Diary/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1474,7 +1474,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9W33GSKZVH;
-				INFOPLIST_FILE = "/Users/lipengyuan/Downloads/Git下载/自己写的/Diary/Diary/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Diary/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

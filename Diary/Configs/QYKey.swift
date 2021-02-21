@@ -29,4 +29,17 @@ struct QYKey {
     /// bugly
     static let buglyAppId = "9f43ed1a99"
     static let buglyAppKey = "9955b975-b66c-4db1-95a9-af862e3b6188"
+    struct AdMob {
+        // https://developers.google.cn/admob/ios/migration
+        static let appId = "ca-app-pub-2729510273929650~8324048661"
+        static let bannerId = "ca-app-pub-2729510273929650/8132476972"
+    }
+    /***
+     应用ID： ca-app-pub-2729510273929650~8324048661
+     横幅ID：ca-app-pub-2729510273929650/8132476972
+     启动id: ca-app-pub-2729510273929650/8777035303
+     原生：ca-app-pub-2729510273929650/4548455187
+     插页： ca-app-pub-2729510273929650/9713700692
+     插页激励：ca-app-pub-2729510273929650/9522129009
+     */
 }
